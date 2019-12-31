@@ -23,7 +23,7 @@ struct Planet: Codable {
 
   let orbitalPeriod: String
 
-  let edited: String
+  let edited: Date
 
   let films: [String]
 
@@ -31,7 +31,7 @@ struct Planet: Codable {
 
   let gravity: String
 
-  let created: String
+  let created: Date
 
   let rotationPeriod: String
 

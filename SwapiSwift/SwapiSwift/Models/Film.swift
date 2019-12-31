@@ -9,7 +9,7 @@
 import Foundation
 
 struct Film: Codable {
-  let created: String
+  let created: Date
 
   let characters: [String]
 
@@ -31,7 +31,7 @@ struct Film: Codable {
 
   let openingCrawl: String
 
-  let edited: String
+  let edited: Date
 
   let vehicles: [String]
 

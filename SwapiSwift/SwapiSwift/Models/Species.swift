@@ -11,7 +11,7 @@ import Foundation
 struct Species: Codable {
   let films: [String]
 
-  let created: String
+  let created: Date
 
   let url: String
 
@@ -27,7 +27,7 @@ struct Species: Codable {
 
   let homeworld: String
 
-  let edited: String
+  let edited: Date
 
   let averageLifespan: String
 

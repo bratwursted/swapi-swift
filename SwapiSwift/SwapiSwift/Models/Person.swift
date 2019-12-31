@@ -19,13 +19,13 @@ struct Person: Codable {
 
   let url: String
 
-  let edited: String
+  let edited: Date
 
   let starships: [String]
 
   let homeworld: String
 
-  let created: String
+  let created: Date
 
   let birthYear: String
 
