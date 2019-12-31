@@ -17,7 +17,7 @@ struct Planet: Codable {
 
   let url: String
 
-  let residents: [Person]
+  let residents: [String]
 
   let climate: String
 
@@ -25,7 +25,7 @@ struct Planet: Codable {
 
   let edited: String
 
-  let films: [Film]
+  let films: [String]
 
   let surfaceWater: String
 

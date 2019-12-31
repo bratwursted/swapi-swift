@@ -9,7 +9,7 @@
 import Foundation
 
 struct Starship: Codable {
-  let films: [Film]
+  let films: [String]
 
   let created: String
 
@@ -19,7 +19,7 @@ struct Starship: Codable {
 
   let crew: String
 
-  let pilots: [Person]
+  let pilots: [String]
 
   let cost: String
 

@@ -9,7 +9,7 @@
 import Foundation
 
 struct Species: Codable {
-  let films: [Film]
+  let films: [String]
 
   let created: String
 
@@ -23,7 +23,7 @@ struct Species: Codable {
 
   let hairColors: String
 
-  let people: [Person]
+  let people: [String]
 
   let homeworld: String
 

@@ -11,15 +11,15 @@ import Foundation
 struct Film: Codable {
   let created: String
 
-  let characters: [Person]
+  let characters: [String]
 
   let url: String
 
   let producer: String
 
-  let starships: [Starship]
+  let starships: [String]
 
-  let planets: [Planet]
+  let planets: [String]
 
   let title: String
 
@@ -27,13 +27,13 @@ struct Film: Codable {
 
   let director: String
 
-  let species: [Species]
+  let species: [String]
 
   let openingCrawl: String
 
   let edited: String
 
-  let vehicles: [Vehicle]
+  let vehicles: [String]
 
   let episodeId: Int
 

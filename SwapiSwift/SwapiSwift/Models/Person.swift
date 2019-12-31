@@ -11,7 +11,7 @@ import Foundation
 struct Person: Codable {
   let hairColor: String
 
-  let films: [Film]
+  let films: [String]
 
   let mass: String
 
@@ -21,7 +21,7 @@ struct Person: Codable {
 
   let edited: String
 
-  let starships: [Starship]
+  let starships: [String]
 
   let homeworld: String
 
@@ -29,9 +29,9 @@ struct Person: Codable {
 
   let birthYear: String
 
-  let vehicles: [Vehicle]
+  let vehicles: [String]
 
-  let species: [Species]
+  let species: [String]
 
   let name: String
 
