@@ -57,6 +57,10 @@ var sampleFilms: ResourceRoot<Film> {
   load("films")
 }
 
+var sampleRoot: SwapiRoot {
+  load("root")
+}
+
 func load<T: Decodable>(_ testFile: String) -> T {
   let bundle = Bundle(identifier: "com.thinx.SwapiSwiftTests")
   guard let dataFile = bundle?.url(forResource: testFile, withExtension: "json") else {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8F34E25523BB79F900608F46 /* SwapiSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34E24B23BB79F900608F46 /* SwapiSwift.framework */; };
-		8F34E25A23BB79F900608F46 /* SwapiSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E25923BB79F900608F46 /* SwapiSwiftTests.swift */; };
 		8F34E25C23BB79F900608F46 /* SwapiSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F34E24E23BB79F900608F46 /* SwapiSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F34E26623BB7C3C00608F46 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E26523BB7C3C00608F46 /* Film.swift */; };
 		8F34E26923BB7E3500608F46 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E26823BB7E3500608F46 /* Person.swift */; };
@@ -32,6 +31,9 @@
 		8FE79E4F23BC030E00897C77 /* ResourceRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */; };
 		8FE79E5123BC06FF00897C77 /* films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E5023BC06FF00897C77 /* films.json */; };
 		8FE79E5323BC071600897C77 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5223BC071600897C77 /* FilmsTests.swift */; };
+		8FE79E5523BC095000897C77 /* SwapiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5423BC095000897C77 /* SwapiRoot.swift */; };
+		8FE79E5723BC0A9600897C77 /* root.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E5623BC0A9600897C77 /* root.json */; };
+		8FE79E5923BC0AEA00897C77 /* RootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5823BC0AEA00897C77 /* RootTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		8F34E24E23BB79F900608F46 /* SwapiSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwapiSwift.h; sourceTree = "<group>"; };
 		8F34E24F23BB79F900608F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F34E25423BB79F900608F46 /* SwapiSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapiSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F34E25923BB79F900608F46 /* SwapiSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiSwiftTests.swift; sourceTree = "<group>"; };
 		8F34E25B23BB79F900608F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F34E26523BB7C3C00608F46 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		8F34E26823BB7E3500608F46 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -73,6 +74,9 @@
 		8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRoot.swift; sourceTree = "<group>"; };
 		8FE79E5023BC06FF00897C77 /* films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = films.json; sourceTree = "<group>"; };
 		8FE79E5223BC071600897C77 /* FilmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTests.swift; sourceTree = "<group>"; };
+		8FE79E5423BC095000897C77 /* SwapiRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiRoot.swift; sourceTree = "<group>"; };
+		8FE79E5623BC0A9600897C77 /* root.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.json; sourceTree = "<group>"; };
+		8FE79E5823BC0AEA00897C77 /* RootTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,17 +129,17 @@
 		8F34E25823BB79F900608F46 /* SwapiSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				8F34E25923BB79F900608F46 /* SwapiSwiftTests.swift */,
-				8F34E27B23BBBEC600608F46 /* TestData.swift */,
+				8F34E25B23BB79F900608F46 /* Info.plist */,
 				8F34E27923BBBEBA00608F46 /* FilmModelTests.swift */,
+				8FE79E5223BC071600897C77 /* FilmsTests.swift */,
 				8F34E27F23BBCFF400608F46 /* PersonModelTests.swift */,
 				8F34E28323BBD44800608F46 /* PlanetModelTests.swift */,
+				8FE79E5823BC0AEA00897C77 /* RootTests.swift */,
 				8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */,
 				8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */,
+				8F34E27B23BBBEC600608F46 /* TestData.swift */,
 				8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */,
-				8FE79E5223BC071600897C77 /* FilmsTests.swift */,
 				8F34E27823BBBE9300608F46 /* Resources */,
-				8F34E25B23BB79F900608F46 /* Info.plist */,
 			);
 			path = SwapiSwiftTests;
 			sourceTree = "<group>";
@@ -146,10 +150,11 @@
 				8F34E26523BB7C3C00608F46 /* Film.swift */,
 				8F34E26823BB7E3500608F46 /* Person.swift */,
 				8F34E26C23BB805600608F46 /* Planet.swift */,
+				8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */,
 				8F34E26E23BB81D400608F46 /* Species.swift */,
 				8F34E27223BB835900608F46 /* Starship.swift */,
+				8FE79E5423BC095000897C77 /* SwapiRoot.swift */,
 				8F34E27423BB85ED00608F46 /* Vehicle.swift */,
-				8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 		8F34E27823BBBE9300608F46 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8FE79E5623BC0A9600897C77 /* root.json */,
 				8FE79E5023BC06FF00897C77 /* films.json */,
 				8F34E27623BBBE8700608F46 /* film_response.json */,
 				8F34E28123BBD05500608F46 /* person_response.json */,
@@ -273,6 +279,7 @@
 				8F34E28223BBD05500608F46 /* person_response.json in Resources */,
 				8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */,
 				8FE79E5123BC06FF00897C77 /* films.json in Resources */,
+				8FE79E5723BC0A9600897C77 /* root.json in Resources */,
 				8F34E28823BBD6E800608F46 /* species_response.json in Resources */,
 				8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */,
 			);
@@ -287,6 +294,7 @@
 			files = (
 				8F34E27523BB85ED00608F46 /* Vehicle.swift in Sources */,
 				8F34E26F23BB81D500608F46 /* Species.swift in Sources */,
+				8FE79E5523BC095000897C77 /* SwapiRoot.swift in Sources */,
 				8F34E27323BB835900608F46 /* Starship.swift in Sources */,
 				8F34E26D23BB805600608F46 /* Planet.swift in Sources */,
 				8F34E26923BB7E3500608F46 /* Person.swift in Sources */,
@@ -300,10 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F34E28423BBD44800608F46 /* PlanetModelTests.swift in Sources */,
+				8FE79E5923BC0AEA00897C77 /* RootTests.swift in Sources */,
 				8F34E28023BBCFF400608F46 /* PersonModelTests.swift in Sources */,
 				8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */,
 				8F34E27C23BBBEC600608F46 /* TestData.swift in Sources */,
-				8F34E25A23BB79F900608F46 /* SwapiSwiftTests.swift in Sources */,
 				8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */,
 				8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */,
 				8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */,
