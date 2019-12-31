@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a starship featured in the Star Wars universe.
-struct Starship: Codable {
+struct Starship: SwapiResource {
 
   /// An array of Film URL Resources that this starship has appeared in.
   let films: [String]

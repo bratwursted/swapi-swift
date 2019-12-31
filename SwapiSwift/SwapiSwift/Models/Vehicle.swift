@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a vehicle in the Star Wars universe.
-struct Vehicle: Codable {
+struct Vehicle: SwapiResource {
 
   /// An array of Film URL Resources that this vehicle has appeared in.
   let films: [String]

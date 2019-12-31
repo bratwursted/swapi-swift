@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a person in the Star Wars universe. 
-struct Person: Codable {
+struct Person: SwapiResource {
 
   /// The hair color of this person.
   let hairColor: String

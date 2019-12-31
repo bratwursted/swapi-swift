@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a Star Wars film.
-struct Film: Codable {
+struct Film: SwapiResource {
 
   /// The timestamp for when this resource was created.
   let created: Date
