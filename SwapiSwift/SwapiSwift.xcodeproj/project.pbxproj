@@ -30,6 +30,8 @@
 		8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */; };
 		8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E4823BBF4ED00897C77 /* vehicle_response.json */; };
 		8FE79E4F23BC030E00897C77 /* RootResourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4E23BC030E00897C77 /* RootResourcePage.swift */; };
+		8FE79E5123BC06FF00897C77 /* films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E5023BC06FF00897C77 /* films.json */; };
+		8FE79E5323BC071600897C77 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5223BC071600897C77 /* FilmsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModelTests.swift; sourceTree = "<group>"; };
 		8FE79E4823BBF4ED00897C77 /* vehicle_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicle_response.json; sourceTree = "<group>"; };
 		8FE79E4E23BC030E00897C77 /* RootResourcePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResourcePage.swift; sourceTree = "<group>"; };
+		8FE79E5023BC06FF00897C77 /* films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = films.json; sourceTree = "<group>"; };
+		8FE79E5223BC071600897C77 /* FilmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */,
 				8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */,
 				8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */,
+				8FE79E5223BC071600897C77 /* FilmsTests.swift */,
 				8F34E27823BBBE9300608F46 /* Resources */,
 				8F34E25B23BB79F900608F46 /* Info.plist */,
 			);
@@ -152,6 +157,7 @@
 		8F34E27823BBBE9300608F46 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8FE79E5023BC06FF00897C77 /* films.json */,
 				8F34E27623BBBE8700608F46 /* film_response.json */,
 				8F34E28123BBD05500608F46 /* person_response.json */,
 				8F34E28523BBD4B300608F46 /* planet_response.json */,
@@ -266,6 +272,7 @@
 				8F34E28623BBD4B300608F46 /* planet_response.json in Resources */,
 				8F34E28223BBD05500608F46 /* person_response.json in Resources */,
 				8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */,
+				8FE79E5123BC06FF00897C77 /* films.json in Resources */,
 				8F34E28823BBD6E800608F46 /* species_response.json in Resources */,
 				8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */,
 			);
@@ -300,6 +307,7 @@
 				8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */,
 				8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */,
 				8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */,
+				8FE79E5323BC071600897C77 /* FilmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

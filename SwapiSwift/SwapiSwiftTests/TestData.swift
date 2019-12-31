@@ -53,6 +53,10 @@ var sampleVehicle: Vehicle {
   load("vehicle_response")
 }
 
+var sampleFilms: RootResourcePage<Film> {
+  load("films")
+}
+
 func load<T: Decodable>(_ testFile: String) -> T {
   let bundle = Bundle(identifier: "com.thinx.SwapiSwiftTests")
   guard let dataFile = bundle?.url(forResource: testFile, withExtension: "json") else {
