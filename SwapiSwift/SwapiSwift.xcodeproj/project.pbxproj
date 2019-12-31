@@ -29,7 +29,7 @@
 		8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28D23BBF1D000608F46 /* starship_response.json */; };
 		8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */; };
 		8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E4823BBF4ED00897C77 /* vehicle_response.json */; };
-		8FE79E4F23BC030E00897C77 /* RootResourcePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4E23BC030E00897C77 /* RootResourcePage.swift */; };
+		8FE79E4F23BC030E00897C77 /* ResourceRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */; };
 		8FE79E5123BC06FF00897C77 /* films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E5023BC06FF00897C77 /* films.json */; };
 		8FE79E5323BC071600897C77 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5223BC071600897C77 /* FilmsTests.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +70,7 @@
 		8F34E28D23BBF1D000608F46 /* starship_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starship_response.json; sourceTree = "<group>"; };
 		8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModelTests.swift; sourceTree = "<group>"; };
 		8FE79E4823BBF4ED00897C77 /* vehicle_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicle_response.json; sourceTree = "<group>"; };
-		8FE79E4E23BC030E00897C77 /* RootResourcePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResourcePage.swift; sourceTree = "<group>"; };
+		8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRoot.swift; sourceTree = "<group>"; };
 		8FE79E5023BC06FF00897C77 /* films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = films.json; sourceTree = "<group>"; };
 		8FE79E5223BC071600897C77 /* FilmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +149,7 @@
 				8F34E26E23BB81D400608F46 /* Species.swift */,
 				8F34E27223BB835900608F46 /* Starship.swift */,
 				8F34E27423BB85ED00608F46 /* Vehicle.swift */,
-				8FE79E4E23BC030E00897C77 /* RootResourcePage.swift */,
+				8FE79E4E23BC030E00897C77 /* ResourceRoot.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				8F34E27323BB835900608F46 /* Starship.swift in Sources */,
 				8F34E26D23BB805600608F46 /* Planet.swift in Sources */,
 				8F34E26923BB7E3500608F46 /* Person.swift in Sources */,
-				8FE79E4F23BC030E00897C77 /* RootResourcePage.swift in Sources */,
+				8FE79E4F23BC030E00897C77 /* ResourceRoot.swift in Sources */,
 				8F34E26623BB7C3C00608F46 /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

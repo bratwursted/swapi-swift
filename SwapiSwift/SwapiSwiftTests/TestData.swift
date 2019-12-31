@@ -53,7 +53,7 @@ var sampleVehicle: Vehicle {
   load("vehicle_response")
 }
 
-var sampleFilms: RootResourcePage<Film> {
+var sampleFilms: ResourceRoot<Film> {
   load("films")
 }
 

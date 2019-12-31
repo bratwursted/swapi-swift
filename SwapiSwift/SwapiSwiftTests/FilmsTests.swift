@@ -11,7 +11,7 @@ import XCTest
 
 class FilmsTests: XCTestCase {
 
-  var sut: RootResourcePage<Film>?
+  var sut: ResourceRoot<Film>?
 
   override func setUp() {
     sut = sampleFilms
