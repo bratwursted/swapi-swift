@@ -7,27 +7,58 @@
 //
 
 import XCTest
+@testable import SwapiSwift
 
 class PlanetModelTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+  var sut: Planet?
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+  override func setUp() {
+    sut = samplePlanet
+  }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+  override func tearDown() {
+    sut = nil
+  }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+  /// Some simple tests to validate parsing `Planet` data model. 
+  func testPlanetParsing() {
+    let expectedName = "Alderaan"
+    XCTAssertEqual(sut?.name, expectedName)
+    let expectedRotation = "24"
+    XCTAssertEqual(sut?.rotationPeriod, expectedRotation)
+    let expectedOrbit = "364"
+    XCTAssertEqual(sut?.orbitalPeriod, expectedOrbit)
+    let expectedDiameter = "12500"
+    XCTAssertEqual(sut?.diameter, expectedDiameter)
+    let expectedClimate = "temperate"
+    XCTAssertEqual(sut?.climate, expectedClimate)
+    let expectedGravity = "1 standard"
+    XCTAssertEqual(sut?.gravity, expectedGravity)
+    let expectedTerrain = "grasslands, mountains"
+    XCTAssertEqual(sut?.terrain, expectedTerrain)
+    let expectedWater = "40"
+    XCTAssertEqual(sut?.surfaceWater, expectedWater)
+    let expectedPopulation = "2000000000"
+    XCTAssertEqual(sut?.population, expectedPopulation)
+
+    XCTAssertEqual(sut?.residents.count, 3)
+    let expectedResidents = [
+      "https://swapi.co/api/people/5/",
+      "https://swapi.co/api/people/68/",
+      "https://swapi.co/api/people/81/"
+    ]
+    XCTAssertEqual(sut?.residents[0], expectedResidents[0])
+    XCTAssertEqual(sut?.residents[1], expectedResidents[1])
+    XCTAssertEqual(sut?.residents[2], expectedResidents[2])
+
+    let expectedFilms = [
+      "https://swapi.co/api/films/6/",
+      "https://swapi.co/api/films/1/"
+    ]
+    XCTAssertEqual(sut?.films, expectedFilms)
+
+    XCTAssertEqual(sut?.url, "https://swapi.co/api/planets/2/")
+  }
 
 }

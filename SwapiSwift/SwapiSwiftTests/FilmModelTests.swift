@@ -9,8 +9,6 @@
 import XCTest
 @testable import SwapiSwift
 
-// Some simple tests to validate parsing of `Film` data model
-
 class FilmModelTests: XCTestCase {
 
   var sut: Film?
@@ -23,6 +21,7 @@ class FilmModelTests: XCTestCase {
     sut = nil
   }
 
+  /// Some simple tests to validate parsing of `Film` data model
   func testFilmParing() {
     let expectedTitle = "A New Hope"
     XCTAssertEqual(sut?.title, expectedTitle)
