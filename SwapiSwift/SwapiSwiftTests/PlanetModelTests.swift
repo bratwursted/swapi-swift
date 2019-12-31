@@ -11,6 +11,28 @@ import XCTest
 
 class PlanetModelTests: XCTestCase {
 
+  private struct ExpectedResults {
+    static let name = "Alderaan"
+    static let rotationPeriod = "24"
+    static let orbitalPeriod = "364"
+    static let diameter = "12500"
+    static let climate = "temperate"
+    static let gravity = "1 standard"
+    static let terrain = "grasslands, mountains"
+    static let surfaceWater = "40"
+    static let population = "2000000000"
+    static let residents = [
+      "https://swapi.co/api/people/5/",
+      "https://swapi.co/api/people/68/",
+      "https://swapi.co/api/people/81/"
+    ]
+    static let films = [
+      "https://swapi.co/api/films/6/",
+      "https://swapi.co/api/films/1/"
+    ]
+    static let url = "https://swapi.co/api/planets/2/"
+  }
+
   var sut: Planet?
 
   override func setUp() {
@@ -23,42 +45,18 @@ class PlanetModelTests: XCTestCase {
 
   /// Some simple tests to validate parsing `Planet` data model. 
   func testPlanetParsing() {
-    let expectedName = "Alderaan"
-    XCTAssertEqual(sut?.name, expectedName)
-    let expectedRotation = "24"
-    XCTAssertEqual(sut?.rotationPeriod, expectedRotation)
-    let expectedOrbit = "364"
-    XCTAssertEqual(sut?.orbitalPeriod, expectedOrbit)
-    let expectedDiameter = "12500"
-    XCTAssertEqual(sut?.diameter, expectedDiameter)
-    let expectedClimate = "temperate"
-    XCTAssertEqual(sut?.climate, expectedClimate)
-    let expectedGravity = "1 standard"
-    XCTAssertEqual(sut?.gravity, expectedGravity)
-    let expectedTerrain = "grasslands, mountains"
-    XCTAssertEqual(sut?.terrain, expectedTerrain)
-    let expectedWater = "40"
-    XCTAssertEqual(sut?.surfaceWater, expectedWater)
-    let expectedPopulation = "2000000000"
-    XCTAssertEqual(sut?.population, expectedPopulation)
-
-    XCTAssertEqual(sut?.residents.count, 3)
-    let expectedResidents = [
-      "https://swapi.co/api/people/5/",
-      "https://swapi.co/api/people/68/",
-      "https://swapi.co/api/people/81/"
-    ]
-    XCTAssertEqual(sut?.residents[0], expectedResidents[0])
-    XCTAssertEqual(sut?.residents[1], expectedResidents[1])
-    XCTAssertEqual(sut?.residents[2], expectedResidents[2])
-
-    let expectedFilms = [
-      "https://swapi.co/api/films/6/",
-      "https://swapi.co/api/films/1/"
-    ]
-    XCTAssertEqual(sut?.films, expectedFilms)
-
-    XCTAssertEqual(sut?.url, "https://swapi.co/api/planets/2/")
+    XCTAssertEqual(sut?.name, ExpectedResults.name)
+    XCTAssertEqual(sut?.rotationPeriod, ExpectedResults.rotationPeriod)
+    XCTAssertEqual(sut?.orbitalPeriod, ExpectedResults.orbitalPeriod)
+    XCTAssertEqual(sut?.diameter, ExpectedResults.diameter)
+    XCTAssertEqual(sut?.climate, ExpectedResults.climate)
+    XCTAssertEqual(sut?.gravity, ExpectedResults.gravity)
+    XCTAssertEqual(sut?.terrain, ExpectedResults.terrain)
+    XCTAssertEqual(sut?.surfaceWater, ExpectedResults.surfaceWater)
+    XCTAssertEqual(sut?.population, ExpectedResults.population)
+    XCTAssertEqual(sut?.residents, ExpectedResults.residents)
+    XCTAssertEqual(sut?.films, ExpectedResults.films)
+    XCTAssertEqual(sut?.url, ExpectedResults.url)
   }
 
 }
