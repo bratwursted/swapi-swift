@@ -25,6 +25,10 @@
 		8F34E28623BBD4B300608F46 /* planet_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28523BBD4B300608F46 /* planet_response.json */; };
 		8F34E28823BBD6E800608F46 /* species_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28723BBD6E800608F46 /* species_response.json */; };
 		8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */; };
+		8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */; };
+		8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28D23BBF1D000608F46 /* starship_response.json */; };
+		8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */; };
+		8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E4823BBF4ED00897C77 /* vehicle_response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		8F34E28523BBD4B300608F46 /* planet_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = planet_response.json; sourceTree = "<group>"; };
 		8F34E28723BBD6E800608F46 /* species_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = species_response.json; sourceTree = "<group>"; };
 		8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesModelTests.swift; sourceTree = "<group>"; };
+		8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipModelTests.swift; sourceTree = "<group>"; };
+		8F34E28D23BBF1D000608F46 /* starship_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starship_response.json; sourceTree = "<group>"; };
+		8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModelTests.swift; sourceTree = "<group>"; };
+		8FE79E4823BBF4ED00897C77 /* vehicle_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicle_response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 				8F34E27F23BBCFF400608F46 /* PersonModelTests.swift */,
 				8F34E28323BBD44800608F46 /* PlanetModelTests.swift */,
 				8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */,
+				8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */,
+				8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */,
 				8F34E27823BBBE9300608F46 /* Resources */,
 				8F34E25B23BB79F900608F46 /* Info.plist */,
 			);
@@ -143,6 +153,8 @@
 				8F34E28123BBD05500608F46 /* person_response.json */,
 				8F34E28523BBD4B300608F46 /* planet_response.json */,
 				8F34E28723BBD6E800608F46 /* species_response.json */,
+				8F34E28D23BBF1D000608F46 /* starship_response.json */,
+				8FE79E4823BBF4ED00897C77 /* vehicle_response.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -250,7 +262,9 @@
 				8F34E27723BBBE8700608F46 /* film_response.json in Resources */,
 				8F34E28623BBD4B300608F46 /* planet_response.json in Resources */,
 				8F34E28223BBD05500608F46 /* person_response.json in Resources */,
+				8FE79E4923BBF4ED00897C77 /* vehicle_response.json in Resources */,
 				8F34E28823BBD6E800608F46 /* species_response.json in Resources */,
+				8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +293,8 @@
 				8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */,
 				8F34E27C23BBBEC600608F46 /* TestData.swift in Sources */,
 				8F34E25A23BB79F900608F46 /* SwapiSwiftTests.swift in Sources */,
+				8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */,
+				8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */,
 				8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

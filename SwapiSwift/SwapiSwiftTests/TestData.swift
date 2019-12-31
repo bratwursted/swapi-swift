@@ -45,6 +45,14 @@ var sampleSpecies: Species {
   load("species_response")
 }
 
+var sampleStarship: Starship {
+  load("starship_response")
+}
+
+var sampleVehicle: Vehicle {
+  load("vehicle_response")
+}
+
 func load<T: Decodable>(_ testFile: String) -> T {
   let bundle = Bundle(identifier: "com.thinx.SwapiSwiftTests")
   guard let dataFile = bundle?.url(forResource: testFile, withExtension: "json") else {
