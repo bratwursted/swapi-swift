@@ -16,6 +16,15 @@
 		8F34E26F23BB81D500608F46 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E26E23BB81D400608F46 /* Species.swift */; };
 		8F34E27323BB835900608F46 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E27223BB835900608F46 /* Starship.swift */; };
 		8F34E27523BB85ED00608F46 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E27423BB85ED00608F46 /* Vehicle.swift */; };
+		8F34E27723BBBE8700608F46 /* film_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E27623BBBE8700608F46 /* film_response.json */; };
+		8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E27923BBBEBA00608F46 /* FilmModelTests.swift */; };
+		8F34E27C23BBBEC600608F46 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E27B23BBBEC600608F46 /* TestData.swift */; };
+		8F34E28023BBCFF400608F46 /* PersonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E27F23BBCFF400608F46 /* PersonModelTests.swift */; };
+		8F34E28223BBD05500608F46 /* person_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28123BBD05500608F46 /* person_response.json */; };
+		8F34E28423BBD44800608F46 /* PlanetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28323BBD44800608F46 /* PlanetModelTests.swift */; };
+		8F34E28623BBD4B300608F46 /* planet_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28523BBD4B300608F46 /* planet_response.json */; };
+		8F34E28823BBD6E800608F46 /* species_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28723BBD6E800608F46 /* species_response.json */; };
+		8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +50,15 @@
 		8F34E26E23BB81D400608F46 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		8F34E27223BB835900608F46 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		8F34E27423BB85ED00608F46 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		8F34E27623BBBE8700608F46 /* film_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = film_response.json; sourceTree = "<group>"; };
+		8F34E27923BBBEBA00608F46 /* FilmModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModelTests.swift; sourceTree = "<group>"; };
+		8F34E27B23BBBEC600608F46 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		8F34E27F23BBCFF400608F46 /* PersonModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModelTests.swift; sourceTree = "<group>"; };
+		8F34E28123BBD05500608F46 /* person_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person_response.json; sourceTree = "<group>"; };
+		8F34E28323BBD44800608F46 /* PlanetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModelTests.swift; sourceTree = "<group>"; };
+		8F34E28523BBD4B300608F46 /* planet_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = planet_response.json; sourceTree = "<group>"; };
+		8F34E28723BBD6E800608F46 /* species_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = species_response.json; sourceTree = "<group>"; };
+		8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				8F34E25923BB79F900608F46 /* SwapiSwiftTests.swift */,
+				8F34E27B23BBBEC600608F46 /* TestData.swift */,
+				8F34E27923BBBEBA00608F46 /* FilmModelTests.swift */,
+				8F34E27F23BBCFF400608F46 /* PersonModelTests.swift */,
+				8F34E28323BBD44800608F46 /* PlanetModelTests.swift */,
+				8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */,
+				8F34E27823BBBE9300608F46 /* Resources */,
 				8F34E25B23BB79F900608F46 /* Info.plist */,
 			);
 			path = SwapiSwiftTests;
@@ -110,6 +134,17 @@
 				8F34E27423BB85ED00608F46 /* Vehicle.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8F34E27823BBBE9300608F46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F34E27623BBBE8700608F46 /* film_response.json */,
+				8F34E28123BBD05500608F46 /* person_response.json */,
+				8F34E28523BBD4B300608F46 /* planet_response.json */,
+				8F34E28723BBD6E800608F46 /* species_response.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F34E27723BBBE8700608F46 /* film_response.json in Resources */,
+				8F34E28623BBD4B300608F46 /* planet_response.json in Resources */,
+				8F34E28223BBD05500608F46 /* person_response.json in Resources */,
+				8F34E28823BBD6E800608F46 /* species_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F34E28423BBD44800608F46 /* PlanetModelTests.swift in Sources */,
+				8F34E28023BBCFF400608F46 /* PersonModelTests.swift in Sources */,
+				8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */,
+				8F34E27C23BBBEC600608F46 /* TestData.swift in Sources */,
 				8F34E25A23BB79F900608F46 /* SwapiSwiftTests.swift in Sources */,
+				8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
