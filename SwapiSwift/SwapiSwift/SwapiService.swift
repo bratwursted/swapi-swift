@@ -9,23 +9,25 @@
 import Foundation
 import Combine
 
-enum ServiceError: Error {
+public enum ServiceError: Error {
   case unknown
   case networkError(error: NetworkError)
   case parsingError(error: Error)
 }
 
-protocol SwapiService {
+public protocol SwapiService {
 
   func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> 
   
 }
 
-struct DataService: SwapiService {
+public struct DataService: SwapiService {
 
   private let dataFetcher = DataFetcher()
 
-  func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
+  public init() { }
+
+  public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
     let config = RequestConfiguration(resource: .films)
     return swapiResource(request: Request(config: config, resourceId: resourceId))
   }
