@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 /// Represents various networking error conditions that may occur.
-enum NetworkError: Error {
+public enum NetworkError: Error {
 
   /// An error returned from the API endpoint (e.g., Resource not found or Server error).
   case apiError(reason: String)
