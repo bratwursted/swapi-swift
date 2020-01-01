@@ -34,6 +34,10 @@
 		8FE79E5523BC095000897C77 /* SwapiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5423BC095000897C77 /* SwapiRoot.swift */; };
 		8FE79E5723BC0A9600897C77 /* root.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE79E5623BC0A9600897C77 /* root.json */; };
 		8FE79E5923BC0AEA00897C77 /* RootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5823BC0AEA00897C77 /* RootTests.swift */; };
+		8FE79E5B23BD02C900897C77 /* SwapiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5A23BD02C900897C77 /* SwapiService.swift */; };
+		8FE79E5D23BD034C00897C77 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5C23BD034C00897C77 /* Request.swift */; };
+		8FE79E5F23BD067C00897C77 /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */; };
+		8FE79E6223BD0E9200897C77 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E6123BD0E9200897C77 /* RequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		8FE79E5423BC095000897C77 /* SwapiRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiRoot.swift; sourceTree = "<group>"; };
 		8FE79E5623BC0A9600897C77 /* root.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.json; sourceTree = "<group>"; };
 		8FE79E5823BC0AEA00897C77 /* RootTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTests.swift; sourceTree = "<group>"; };
+		8FE79E5A23BD02C900897C77 /* SwapiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiService.swift; sourceTree = "<group>"; };
+		8FE79E5C23BD034C00897C77 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
+		8FE79E6123BD0E9200897C77 /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				8F34E24E23BB79F900608F46 /* SwapiSwift.h */,
+				8FE79E5A23BD02C900897C77 /* SwapiService.swift */,
+				8FE79E6023BD0E7A00897C77 /* Networking */,
 				8F34E26723BB7C4300608F46 /* Models */,
 				8F34E24F23BB79F900608F46 /* Info.plist */,
 			);
@@ -139,6 +149,7 @@
 				8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */,
 				8F34E27B23BBBEC600608F46 /* TestData.swift */,
 				8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */,
+				8FE79E6123BD0E9200897C77 /* RequestTests.swift */,
 				8F34E27823BBBE9300608F46 /* Resources */,
 			);
 			path = SwapiSwiftTests;
@@ -172,6 +183,15 @@
 				8FE79E4823BBF4ED00897C77 /* vehicle_response.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FE79E6023BD0E7A00897C77 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8FE79E5C23BD034C00897C77 /* Request.swift */,
+				8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,11 +313,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F34E27523BB85ED00608F46 /* Vehicle.swift in Sources */,
+				8FE79E5B23BD02C900897C77 /* SwapiService.swift in Sources */,
 				8F34E26F23BB81D500608F46 /* Species.swift in Sources */,
+				8FE79E5F23BD067C00897C77 /* RequestConfiguration.swift in Sources */,
 				8FE79E5523BC095000897C77 /* SwapiRoot.swift in Sources */,
 				8F34E27323BB835900608F46 /* Starship.swift in Sources */,
 				8F34E26D23BB805600608F46 /* Planet.swift in Sources */,
 				8F34E26923BB7E3500608F46 /* Person.swift in Sources */,
+				8FE79E5D23BD034C00897C77 /* Request.swift in Sources */,
 				8FE79E4F23BC030E00897C77 /* ResourceRoot.swift in Sources */,
 				8F34E26623BB7C3C00608F46 /* Film.swift in Sources */,
 			);
@@ -312,6 +335,7 @@
 				8F34E28023BBCFF400608F46 /* PersonModelTests.swift in Sources */,
 				8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */,
 				8F34E27C23BBBEC600608F46 /* TestData.swift in Sources */,
+				8FE79E6223BD0E9200897C77 /* RequestTests.swift in Sources */,
 				8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */,
 				8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */,
 				8F34E27A23BBBEBA00608F46 /* FilmModelTests.swift in Sources */,
