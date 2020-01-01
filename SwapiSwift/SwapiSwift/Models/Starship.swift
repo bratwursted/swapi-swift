@@ -15,7 +15,7 @@ struct Starship: SwapiResource {
   let films: [String]
 
   /// Timestamp when this resource was created.
-  let created: String
+  let created: Date
 
   /// The URL for this resource.
   let url: String
@@ -42,7 +42,7 @@ struct Starship: SwapiResource {
   let hyperdriveRating: String
 
   /// Timestamp when this resource was last edited.
-  let edited: String
+  let edited: Date
 
   /// The model or official name of this starship (e.g., T-65 X-wing or DS-1 Orbital Battle Station).
   let model: String
@@ -84,5 +84,32 @@ struct Starship: SwapiResource {
     case maximumAtmosphericSpeed = "max_atmosphering_speed"
     case maximumMegalights = "MGLT"
     case starshipClass = "starship_class"
+  }
+}
+
+extension Starship {
+  static let mockResourceUrl = "https://swapi.co/api/starships/mock"
+
+  static var mock: Starship {
+    Starship(
+      films: [Film.mockResourceUrl],
+      created: Date(),
+      url: mockResourceUrl,
+      cargoCapacity: "Mock Cargo Capacity",
+      crew: "Mock Crew Size",
+      pilots: [Person.mockResourceUrl],
+      cost: "Mock Starship Cost",
+      length: "Mock Starship Length",
+      manufacturer: "Mock Starship Manufacturer",
+      hyperdriveRating: "Mock Hyperdrive Rating",
+      edited: Date(),
+      model: "Mock Starship Model",
+      passengers: "Mock Starship Passenger Capacity",
+      consumables: "Mock Starship Consumables",
+      name: "Mock Starship Name",
+      maximumAtmosphericSpeed: "Mock Maximum Speed",
+      maximumMegalights: "Mock Maximum Megalights",
+      starshipClass: "Mock Starship Class"
+    )
   }
 }

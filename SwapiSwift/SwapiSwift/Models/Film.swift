@@ -70,3 +70,26 @@ struct Film: SwapiResource {
     case episodeId = "episode_id"
   }
 }
+
+extension Film {
+  static let mockResourceUrl = "https://swapi.co/api/film/mock"
+
+  static var mock: Film {
+    Film(
+      created: Date(),
+      characters: [Person.mockResourceUrl],
+      url: mockResourceUrl,
+      producer: "Mock Producer",
+      starships: [Starship.mockResourceUrl],
+      planets: [Planet.mockResourceUrl],
+      title: "Mock Title",
+      releaseDate: "Mock Release Date",
+      director: "Mock Director",
+      species: [Species.mockResourceUrl],
+      openingCrawl: "Mock Opening Crawl",
+      edited: Date(),
+      vehicles: [Vehicle.mockResourceUrl],
+      episodeId: 1
+    )
+  }
+}

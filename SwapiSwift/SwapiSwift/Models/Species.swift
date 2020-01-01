@@ -74,3 +74,27 @@ struct Species: SwapiResource {
     case eyeColors = "eye_colors"
   }
 }
+
+extension Species {
+  static let mockResourceUrl = "https://swapi.co/api/species/mock"
+
+  static var mock: Species {
+    Species(
+      films: [Film.mockResourceUrl],
+      created: Date(),
+      url: mockResourceUrl,
+      designation: "Mock Species Designation",
+      language: "Mock Language",
+      skinColors: "Mock Skin Colors",
+      hairColors: "Mock Hair Colors",
+      people: [Person.mockResourceUrl],
+      homeworld: Planet.mockResourceUrl,
+      edited: Date(),
+      averageLifespan: "Mock Average Lifespan",
+      averageHeight: "Mock Average Height",
+      classification: "Mock Classification",
+      name: "Mock Species Name",
+      eyeColors: "Mock Eye Colors"
+    )
+  }
+}

@@ -70,3 +70,26 @@ struct Planet: SwapiResource {
     case name
   }
 }
+
+extension Planet {
+  static let mockResourceUrl = "https://swapi.co/api/planets/mock"
+
+  static var mock: Planet {
+    Planet(
+      terrain: "Mock Terrain",
+      population: "Mock Population",
+      diameter: "Mock Diameter",
+      url: mockResourceUrl,
+      residents: [Person.mockResourceUrl],
+      climate: "Mock Climate",
+      orbitalPeriod: "Mock Orbital Period",
+      edited: Date(),
+      films: [Film.mockResourceUrl],
+      surfaceWater: "Mock Surface Water",
+      gravity: "Mock Gravity",
+      created: Date(),
+      rotationPeriod: "Mock Rotation Period",
+      name: "Mock Planet Name"
+    )
+  }
+}

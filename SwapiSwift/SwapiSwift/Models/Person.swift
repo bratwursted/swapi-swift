@@ -78,3 +78,28 @@ struct Person: SwapiResource {
     case skinColor = "skin_color"
   }
 }
+
+extension Person {
+  static let mockResourceUrl = "https://swapi.co/api/people/mock"
+
+  static var mock: Person {
+    Person(
+      hairColor: "Mock Hair Color",
+      films: [Film.mockResourceUrl],
+      mass: "Mock Mass",
+      gender: "Mock Gender",
+      url: mockResourceUrl,
+      edited: Date(),
+      starships: [Starship.mockResourceUrl],
+      homeworld: Planet.mockResourceUrl,
+      created: Date(),
+      birthYear: "Mock Birth Year",
+      vehicles: [Vehicle.mockResourceUrl],
+      species: [Species.mockResourceUrl],
+      name: "Mock Person Name",
+      height: "Mock Height",
+      eyeColor: "Mock Eye Color",
+      skinColor: "Mock Skin Color"
+    )
+  }
+}

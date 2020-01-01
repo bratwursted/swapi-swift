@@ -15,7 +15,7 @@ struct Vehicle: SwapiResource {
   let films: [String]
 
   /// Timestamp when this resource was created.
-  let created: String
+  let created: Date
 
   /// The hypermedia URL of this resource.
   let url: String
@@ -39,7 +39,7 @@ struct Vehicle: SwapiResource {
   let manufacturer: String
 
   /// Timestamp when this resource was last edited.
-  let edited: String
+  let edited: Date
 
   /// The model or official name of this vehicle (e.g.,  All Terrain Attack Transport).
   let model: String
@@ -76,5 +76,30 @@ struct Vehicle: SwapiResource {
     case consumables
     case name
     case maximumAtmosphericSpeed = "max_atmosphering_speed"
+  }
+}
+
+extension Vehicle {
+  static let mockResourceUrl = "https://swapi.co/api/vehicles/mock"
+
+  static var mock: Vehicle {
+    Vehicle(
+      films: [Film.mockResourceUrl],
+      created: Date(),
+      url: mockResourceUrl,
+      cargoCapacity: "Mock Vehicle Cargo Capacity",
+      crew: "Mock Vehicle Crew Size",
+      pilots: [Person.mockResourceUrl],
+      cost: "Mock Vehicle Cost",
+      length: "Mock Vehicle Length",
+      manufacturer: "Mock Vehicle Manufacturer",
+      edited: Date(),
+      model: "Mock Vehicle Model",
+      passengers: "Mock Vehicle Passenger Capacity",
+      vehicleClass: "Mock Vehicle Class",
+      consumables: "Mock Vehicle Consumables",
+      name: "Mock Vehicle Name",
+      maximumAtmosphericSpeed: "Mock Vehicle Maximum Speed"
+    )
   }
 }
