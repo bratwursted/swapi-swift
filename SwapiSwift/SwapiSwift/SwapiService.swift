@@ -17,7 +17,9 @@ public enum ServiceError: Error {
 
 public protocol SwapiService {
 
-  func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> 
+  func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError>
+
+  func allFilms() -> AnyPublisher<ResourceRoot<Film>, ServiceError>
   
 }
 
@@ -30,6 +32,11 @@ public struct DataService: SwapiService {
   public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
     let config = RequestConfiguration(resource: .films)
     return swapiResource(request: Request(config: config, resourceId: resourceId))
+  }
+
+  public func allFilms() -> AnyPublisher<ResourceRoot<Film>, ServiceError> {
+    let config = RequestConfiguration(resource: .films)
+    return swapiResource(request: Request(config: config))
   }
 
   private func swapiResource<T: Decodable>(request: Request) -> AnyPublisher<T, ServiceError> {
