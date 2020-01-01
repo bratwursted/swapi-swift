@@ -9,55 +9,55 @@
 import Foundation
 
 /// Represents metadata associated with a person in the Star Wars universe. 
-struct Person: SwapiResource {
+public struct Person: SwapiResource {
 
   /// The hair color of this person.
-  let hairColor: String
+  public let hairColor: String
 
   /// An array of `Film` URL resources featuring this person.
-  let films: [String]
+  public let films: [String]
 
   /// The mass of this person in kilograms.
-  let mass: String
+  public let mass: String
 
   /// The gender of this person (if known).
-  let gender: String
+  public let gender: String
 
   /// The url of this resource
-  let url: String
+  public let url: String
 
   /// The timestamp of the last edit for this resource.
-  let edited: Date
+  public let edited: Date
 
   /// An array `Starship` URL resources that this person has piloted.
-  let starships: [String]
+  public let starships: [String]
 
   /// The url of the planet resource that this person was born on.
-  let homeworld: String
+  public let homeworld: String
 
   /// The timestamp of when this resource was created.
-  let created: Date
+  public let created: Date
 
   /// The birth year of this person. BBY (Before the Battle of Yavin) or ABY (After the Battle of Yavin).
-  let birthYear: String
+  public let birthYear: String
 
   /// An array of `Vehicle` URL resources that this person has piloted
-  let vehicles: [String]
+  public let vehicles: [String]
 
   /// The url of the species resource that this person is.
-  let species: [String]
+  public let species: [String]
 
   /// The name of this person.
-  let name: String
+  public let name: String
 
   /// The height of this person in meters.
-  let height: String
+  public let height: String
 
   /// The eye color of this person.
-  let eyeColor: String
+  public let eyeColor: String
 
   /// The skin color of this person.
-  let skinColor: String
+  public let skinColor: String
 
   enum CodingKeys: String, CodingKey {
     case hairColor = "hair_color"

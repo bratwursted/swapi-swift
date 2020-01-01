@@ -9,49 +9,49 @@
 import Foundation
 
 /// Represents metadata associated with a Star Wars film.
-struct Film: SwapiResource {
+public struct Film: SwapiResource {
 
   /// The timestamp for when this resource was created.
-  let created: Date
+  public let created: Date
 
   /// An array of `Person` resource URLs  representing the people featured within this film.
-  let characters: [String]
+  public let characters: [String]
 
   /// The url of this resource.
-  let url: String
+  public let url: String
 
   /// The producer(s) of this film.
-  let producer: String
+  public let producer: String
 
   /// An array of `Starship` URL resources featured within this film.
-  let starships: [String]
+  public let starships: [String]
 
   /// An array of `Planet` URL resources featured in the film.
-  let planets: [String]
+  public let planets: [String]
 
   /// The title of the film.
-  let title: String
+  public let title: String
 
   /// The release date at original creator country.
-  let releaseDate: String
+  public let releaseDate: String
 
   /// The director of this film.
-  let director: String
+  public let director: String
 
   /// An array of `Species` URL resources featured in the film.
-  let species: [String]
+  public let species: [String]
 
   /// The opening crawl text at the beginning of this film.
-  let openingCrawl: String
+  public let openingCrawl: String
 
   /// The timestamp for when this resource was last edited.
-  let edited: Date
+  public let edited: Date
 
   /// An array of `Vehicle` URL resources featured in the film.
-  let vehicles: [String]
+  public let vehicles: [String]
 
   /// The episode number of this film.
-  let episodeId: Int
+  public let episodeId: Int
 
   enum CodingKeys: String, CodingKey {
     case created

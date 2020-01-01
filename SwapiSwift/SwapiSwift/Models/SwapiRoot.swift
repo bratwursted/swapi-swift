@@ -9,24 +9,24 @@
 import Foundation
 
 /// Represents a response for the SW API root (i.e., GET /api/) containing URLs to all available resources.
-struct SwapiRoot: Codable {
+public struct SwapiRoot: Codable {
 
   /// The root URL for people resources.
-  let people: String
+  public let people: String
 
   /// The root URL for planet resources.
-  let planets: String
+  public let planets: String
 
   /// The root URL for films resources.
-  let films: String
+  public let films: String
 
   /// The root URL for species resources.
-  let species: String
+  public let species: String
 
   /// The root URL for vehicles resources.
-  let vehicles: String
+  public let vehicles: String
 
   /// The root URL for starships resources.
-  let starships: String
+  public let starships: String
 
 }

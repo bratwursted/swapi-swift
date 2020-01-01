@@ -8,20 +8,20 @@
 
 import Foundation
 
-typealias SwapiResource = Codable
+public typealias SwapiResource = Codable
 
 /// Represents a response from the resource root endpoint containing for all resources of a type (e.g., Films or Starships).
-struct ResourceRoot<T: SwapiResource>: Codable {
+public struct ResourceRoot<T: SwapiResource>: Codable {
 
   /// The count of results returned from the endpoint.
-  let count: Int
+  public let count: Int
 
   /// The resource URL for the next page of results.
-  let next: String?
+  public let next: String?
 
   /// The resource URL for the previous page of results.
-  let previous: String?
+  public let previous: String?
 
   /// The array of entities.
-  let results: [T]
+  public let results: [T]
 }

@@ -9,55 +9,55 @@
 import Foundation
 
 /// Represents metadata associated with a vehicle in the Star Wars universe.
-struct Vehicle: SwapiResource {
+public struct Vehicle: SwapiResource {
 
   /// An array of Film URL Resources that this vehicle has appeared in.
-  let films: [String]
+  public let films: [String]
 
   /// Timestamp when this resource was created.
-  let created: Date
+  public let created: Date
 
   /// The hypermedia URL of this resource.
-  let url: String
+  public let url: String
 
   /// The maximum number of kilograms that this vehicle can transport.
-  let cargoCapacity: String
+  public let cargoCapacity: String
 
   /// The number of personnel needed to run or pilot this vehicle.
-  let crew: String
+  public let crew: String
 
   /// An array of People URL Resources that this vehicle has been piloted by.
-  let pilots: [String]
+  public let pilots: [String]
 
   /// The cost of this vehicle new, in galactic credits.
-  let cost: String
+  public let cost: String
 
   /// The length of this vehicle in meters.
-  let length: String
+  public let length: String
 
   /// The manufacturer of this vehicle. Comma seperated if more than one.
-  let manufacturer: String
+  public let manufacturer: String
 
   /// Timestamp when this resource was last edited.
-  let edited: Date
+  public let edited: Date
 
   /// The model or official name of this vehicle (e.g.,  All Terrain Attack Transport).
-  let model: String
+  public let model: String
 
   /// The number of non-essential people this vehicle can transport.
-  let passengers: String
+  public let passengers: String
 
   /// The class of this vehicle (e.g., Wheeled).
-  let vehicleClass: String
+  public let vehicleClass: String
 
   /// The maximum length of time that this vehicle can provide consumables for its entire crew without having to resupply.
-  let consumables: String
+  public let consumables: String
 
   /// The common name of this vehicle (e.g., Sand Crawler).
-  let name: String
+  public let name: String
 
   /// The maximum speed of this vehicle in atmosphere.
-  let maximumAtmosphericSpeed: String
+  public let maximumAtmosphericSpeed: String
 
   enum CodingKeys: String, CodingKey {
     case films

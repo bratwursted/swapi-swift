@@ -9,49 +9,49 @@
 import Foundation
 
 /// Represents metadata associated with a planet in the Star Wars unioverse.
-struct Planet: SwapiResource {
+public struct Planet: SwapiResource {
 
   /// The terrain of this planet. Comma-seperated if diverse.
-  let terrain: String
+  public let terrain: String
 
   /// The average populationof sentient beings inhabiting this planet.
-  let population: String
+  public let population: String
 
   /// The diameter of this planet in kilometers.
-  let diameter: String
+  public let diameter: String
 
   /// The hypermedia URL of this resource.
-  let url: String
+  public let url: String
 
   /// An array of `Person` URL Resources that live on this planet.
-  let residents: [String]
+  public let residents: [String]
 
   /// The climate of this planet. Comma-seperated if diverse.
-  let climate: String
+  public let climate: String
 
   /// The number of standard days it takes for this planet to complete a single orbit of its local star.
-  let orbitalPeriod: String
+  public let orbitalPeriod: String
 
   /// The timestamp for when this resource was last edited.
-  let edited: Date
+  public let edited: Date
 
   /// An array of `Film` URL resources that this planet has appeared in.
-  let films: [String]
+  public let films: [String]
 
   /// The percentage of the planet surface that is naturally occuring water or bodies of water.
-  let surfaceWater: String
+  public let surfaceWater: String
 
   /// A number denoting the gravity of this planet. Where 1 is normal.
-  let gravity: String
+  public let gravity: String
 
   /// The timestamp for when this resource was created.
-  let created: Date
+  public let created: Date
 
   /// The number of standard hours it takes for this planet to complete a single rotation on its axis.
-  let rotationPeriod: String
+  public let rotationPeriod: String
 
   /// The name of this planet.
-  let name: String
+  public let name: String
 
   enum CodingKeys: String, CodingKey {
     case terrain
