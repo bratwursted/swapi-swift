@@ -38,6 +38,7 @@
 		8FE79E5D23BD034C00897C77 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5C23BD034C00897C77 /* Request.swift */; };
 		8FE79E5F23BD067C00897C77 /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */; };
 		8FE79E6223BD0E9200897C77 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E6123BD0E9200897C77 /* RequestTests.swift */; };
+		8FE79E6423BD169400897C77 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E6323BD169400897C77 /* DataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		8FE79E5C23BD034C00897C77 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
 		8FE79E6123BD0E9200897C77 /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
+		8FE79E6323BD169400897C77 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		8FE79E6023BD0E7A00897C77 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8FE79E6323BD169400897C77 /* DataFetcher.swift */,
 				8FE79E5C23BD034C00897C77 /* Request.swift */,
 				8FE79E5E23BD067C00897C77 /* RequestConfiguration.swift */,
 			);
@@ -315,6 +318,7 @@
 				8F34E27523BB85ED00608F46 /* Vehicle.swift in Sources */,
 				8FE79E5B23BD02C900897C77 /* SwapiService.swift in Sources */,
 				8F34E26F23BB81D500608F46 /* Species.swift in Sources */,
+				8FE79E6423BD169400897C77 /* DataFetcher.swift in Sources */,
 				8FE79E5F23BD067C00897C77 /* RequestConfiguration.swift in Sources */,
 				8FE79E5523BC095000897C77 /* SwapiRoot.swift in Sources */,
 				8F34E27323BB835900608F46 /* Starship.swift in Sources */,
