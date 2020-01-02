@@ -20,7 +20,7 @@ public protocol SwapiService {
   func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError>
 
   func allFilms() -> AnyPublisher<ResourceRoot<Film>, ServiceError>
-  
+
 }
 
 public struct DataService: SwapiService {

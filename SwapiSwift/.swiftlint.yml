@@ -1,0 +1,6 @@
+excluded: 
+  - SwapiSwiftTests
+  - "*.playground"
+line_length: 
+  ignores_comments: true
+

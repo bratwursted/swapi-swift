@@ -23,7 +23,7 @@ class VehicleModelTests: XCTestCase {
     static let cargo = "50000"
     static let consumables = "2 months"
     static let vehicleClass = "wheeled"
-    static let pilots : [String] = []
+    static let pilots: [String] = []
     static let films = [
       "https://swapi.co/api/films/5/",
       "https://swapi.co/api/films/1/"
