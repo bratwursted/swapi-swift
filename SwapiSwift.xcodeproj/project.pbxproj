@@ -133,7 +133,7 @@
 			children = (
 				8F34E24E23BB79F900608F46 /* SwapiSwift.h */,
 				8FE79E5A23BD02C900897C77 /* SwapiService.swift */,
-				8FE79E6523BD25E800897C77 /* Parsing.swift */,
+				8FBF743623BE2A6D008FF80D /* Parsing */,
 				8FE79E6023BD0E7A00897C77 /* Networking */,
 				8F34E26723BB7C4300608F46 /* Models */,
 				8F34E24F23BB79F900608F46 /* Info.plist */,
@@ -188,6 +188,14 @@
 				8FE79E4823BBF4ED00897C77 /* vehicle_response.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FBF743623BE2A6D008FF80D /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				8FE79E6523BD25E800897C77 /* Parsing.swift */,
+			);
+			path = Parsing;
 			sourceTree = "<group>";
 		};
 		8FE79E6023BD0E7A00897C77 /* Networking */ = {
