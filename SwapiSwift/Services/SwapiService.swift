@@ -193,6 +193,10 @@ public struct MockDataService<T: SwapiResource>: SwapiService {
 
   let mockData: T
 
+  public init(mockData: T) {
+    self.mockData = mockData
+  }
+
   public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
     guard let filmData = mockData as? Film else {
       fatalError("Expected mock data to be initialized with type Film")

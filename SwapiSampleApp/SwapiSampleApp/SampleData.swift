@@ -9,9 +9,8 @@
 import Foundation
 import SwapiSwift
 
-var sampleFilmsList: [Film] {
-  let filmsResponse: ResourceRoot<Film> = load("films")
-  return filmsResponse.results
+var sampleFilms: ResourceRoot<Film> {
+  load("films")
 }
 
 func load<T: SwapiResource>(_ fileName: String) -> T {
