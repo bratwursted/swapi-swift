@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SwapiSampleApp/SwapiSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SwapiPlayground.playground">
    </FileRef>
    <FileRef
