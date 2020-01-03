@@ -13,6 +13,27 @@ protocol GraphService {
 
   func fetchAssociatedProperties()
 
+  func handleError(_ error: ServiceError)
+
+}
+
+extension GraphService {
+
+  func handleError(_ error: ServiceError) {
+    print("There was an error: \(error)")
+  }
+
+}
+
+func fetchFilms(
+  from dataService: SwapiService,
+  with urls: [String],
+  receiveCompletion: @escaping ((Subscribers.Completion<ServiceError>) -> Void),
+  receiveValue: @escaping (([Film]) -> Void)
+) -> AnyCancellable {
+  return dataService.films(fromResourceUrls: urls)
+    .receive(on: DispatchQueue.main)
+    .sink(receiveCompletion: receiveCompletion, receiveValue: receiveValue)
 }
 
 /// A free function for getting multiple `Person` resources from an array of resource URLs.
@@ -54,7 +75,7 @@ func fetchPlanets(
 ///   - dataService: The specified data service, conforming to `SwapiService`.
 ///   - urls: The specified array of `String` resource URLs.
 ///   - receiveCompletion: A closure executed upon completion ofg of the network request.
-///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Species` as its argument. 
+///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Species` as its argument.
 func fetchSpecies(
   from dataService: SwapiService,
   with urls: [String],

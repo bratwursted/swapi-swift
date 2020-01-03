@@ -36,6 +36,7 @@ public final class FilmGraphService: GraphService {
     self.dataService = dataService
   }
 
+  // swiftlint:disable:next function_body_length
   public func fetchAssociatedProperties() {
 
     // get characters
@@ -124,9 +125,5 @@ public final class FilmGraphService: GraphService {
       self.vehicles = vehicles
     })
     .store(in: &disposables)
-  }
-
-  private func handleError(_ error: ServiceError) {
-    print("There was an error \(error)")
   }
 }

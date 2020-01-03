@@ -23,6 +23,8 @@ public protocol SwapiService {
 
   func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError>
 
+  func planet(withResourceUrl url: String) -> AnyPublisher<Planet, ServiceError>
+
   func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError>
 
   func starship(withId resourceId: String) -> AnyPublisher<Starship, ServiceError>
@@ -74,6 +76,10 @@ public struct DataService: SwapiService {
   public func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError> {
     let config = RequestConfiguration(resource: .planets)
     return resource(request: Request(config: config, resourceId: resourceId))
+  }
+
+  public func planet(withResourceUrl url: String) -> AnyPublisher<Planet, ServiceError> {
+    return resource(request: Request(resourceUrl: url))
   }
 
   public func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError> {
