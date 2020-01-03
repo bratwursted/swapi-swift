@@ -1,4 +1,5 @@
-excluded: 
+excluded:
+  - SwapiSampleApp 
   - SwapiSwiftTests
   - "*.playground"
 line_length: 
