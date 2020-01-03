@@ -36,7 +36,7 @@ public struct Species: SwapiResource {
   public let people: [String]
 
   /// The URL of a planet resource, a planet that this species originates from.
-  public let homeworld: String
+  public let homeworld: String?
 
   /// Timestamp when this resource was last edited.
   public let edited: Date
