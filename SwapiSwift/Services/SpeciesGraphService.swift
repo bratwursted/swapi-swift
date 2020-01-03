@@ -23,6 +23,8 @@ final class SpeciesGraphService: GraphService {
 
   @Published var people: [Person] = []
 
+  @Published var homeworld: Planet?
+
   init(
     species: Species,
     dataService: SwapiService = DataService()
@@ -32,6 +34,23 @@ final class SpeciesGraphService: GraphService {
   }
 
   func fetchAssociatedProperties() {
+
+    // get homeworld
+
+    dataService.planet(withResourceUrl: species.homeworld)
+      .receive(on: DispatchQueue.main)
+      .sink(receiveCompletion: { completion in
+        switch completion {
+        case .failure(let error):
+          self.handleError(error)
+          self.homeworld = nil
+        case .finished:
+          break
+        }
+      }, receiveValue: { planet in
+        self.homeworld = planet
+      })
+      .store(in: &disposables)
 
     // get films
 
