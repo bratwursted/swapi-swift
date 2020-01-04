@@ -21,6 +21,8 @@
 		8F07F78F23C1226B00E9EF37 /* SpeciesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07F78E23C1226B00E9EF37 /* SpeciesRowView.swift */; };
 		8F07F79123C1248600E9EF37 /* StarshipRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07F79023C1248600E9EF37 /* StarshipRowView.swift */; };
 		8F07F79323C126E800E9EF37 /* VehicleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07F79223C126E800E9EF37 /* VehicleRowView.swift */; };
+		8F07F79523C14CB800E9EF37 /* FilmHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07F79423C14CB800E9EF37 /* FilmHeaderView.swift */; };
+		8F07F79723C14CC600E9EF37 /* FilmHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F07F79623C14CC600E9EF37 /* FilmHeaderViewModel.swift */; };
 		8F535D8F23BF759C00E72BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */; };
 		8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */; };
 		8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9223BF759C00E72BF9 /* ContentView.swift */; };
@@ -79,6 +81,8 @@
 		8F07F78E23C1226B00E9EF37 /* SpeciesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRowView.swift; sourceTree = "<group>"; };
 		8F07F79023C1248600E9EF37 /* StarshipRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipRowView.swift; sourceTree = "<group>"; };
 		8F07F79223C126E800E9EF37 /* VehicleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRowView.swift; sourceTree = "<group>"; };
+		8F07F79423C14CB800E9EF37 /* FilmHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmHeaderView.swift; sourceTree = "<group>"; };
+		8F07F79623C14CC600E9EF37 /* FilmHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmHeaderViewModel.swift; sourceTree = "<group>"; };
 		8F535D8B23BF759C00E72BF9 /* SwapiSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 			children = (
 				8F07F78A23C11B0700E9EF37 /* CharacterRowView.swift */,
 				8F07F78823C10F5000E9EF37 /* Film+Strings.swift */,
+				8F07F79423C14CB800E9EF37 /* FilmHeaderView.swift */,
+				8F07F79623C14CC600E9EF37 /* FilmHeaderViewModel.swift */,
 				8F07F78223BFE58800E9EF37 /* FilmInfoView.swift */,
 				8F07F78423BFE59600E9EF37 /* FilmInfoViewModel.swift */,
 				8FAE12C923BFB02E00F0D03D /* FilmView.swift */,
@@ -337,6 +343,7 @@
 				8F07F79323C126E800E9EF37 /* VehicleRowView.swift in Sources */,
 				8FAE12CC23BFB03B00F0D03D /* FilmViewModel.swift in Sources */,
 				8F07F78323BFE58800E9EF37 /* FilmInfoView.swift in Sources */,
+				8F07F79523C14CB800E9EF37 /* FilmHeaderView.swift in Sources */,
 				8FAE12CA23BFB02E00F0D03D /* FilmView.swift in Sources */,
 				8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */,
 				8FAE12C723BFAE7600F0D03D /* FilmResultViewModel.swift in Sources */,
@@ -344,6 +351,7 @@
 				8F07F78D23C11F2800E9EF37 /* PlanetRowView.swift in Sources */,
 				8F535DBE23BF7FE500E72BF9 /* FilmsListViewModel.swift in Sources */,
 				8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */,
+				8F07F79723C14CC600E9EF37 /* FilmHeaderViewModel.swift in Sources */,
 				8F07F78923C10F5000E9EF37 /* Film+Strings.swift in Sources */,
 				8F07F78B23C11B0700E9EF37 /* CharacterRowView.swift in Sources */,
 				8F07F78523BFE59600E9EF37 /* FilmInfoViewModel.swift in Sources */,
