@@ -49,6 +49,12 @@ struct FilmView: View {
       } else {
         starshipsSection
       }
+
+      if viewModel.vehicles.isEmpty {
+        emptySection(withTitle: HeaderTitle.vehicles.rawValue)
+      } else {
+        vehiclesSection
+      }
     }
     .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
     .onAppear {
@@ -109,6 +115,14 @@ struct FilmView: View {
     Section(header: Text(HeaderTitle.starships.rawValue)) {
       ForEach(0..<3) {
         self.viewModel.starshipRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var vehiclesSection: some View {
+    Section(header: Text(HeaderTitle.vehicles.rawValue)) {
+      ForEach(0..<3) {
+        self.viewModel.vehicleRowView(forIndex: $0)
       }
     }
   }
