@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a Star Wars film.
-public struct Film: SwapiResource {
+public struct Film: SwapiResource, Equatable, Hashable {
 
   /// The timestamp for when this resource was created.
   public let created: Date

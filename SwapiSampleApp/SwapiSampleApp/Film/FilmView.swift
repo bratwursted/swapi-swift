@@ -18,28 +18,28 @@ struct FilmView: View {
       basicInfoSection
       productionSection
     }
-    .listStyle(GroupedListStyle())
-    .padding()
+    .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
   }
 
   var basicInfoSection: some View {
     Section {
-      VStack(alignment: .leading, spacing: 6) {
-        Text(viewModel.episideTitle)
-          .font(.title)
-        Text(viewModel.filmTitle)
-          .font(.body)
-        Text("\"\(viewModel.crawlSnipet)\"")
-          .font(.subheadline)
+      NavigationLink(destination: viewModel.filmInfoView()) {
+        VStack(alignment: .leading, spacing: 12) {
+          Text(viewModel.episideTitle)
+            .font(.title)
+          Text(viewModel.filmTitle)
+            .font(.body)
+          Text("\"\(viewModel.crawlSnipet)\"")
+            .font(.subheadline)
+        }
       }
     }
   }
 
   var productionSection: some View {
-    Section {
-      VStack(alignment: .leading, spacing: 6) {
+    Section(header: Text("Production Details")) {
+      VStack(alignment: .leading, spacing: 12) {
         Text("Released: \(viewModel.formattedReleaseDate)")
-          .font(.callout)
         Text("Director: \(viewModel.director)")
         Text("Producers: \(viewModel.producers)")
       }

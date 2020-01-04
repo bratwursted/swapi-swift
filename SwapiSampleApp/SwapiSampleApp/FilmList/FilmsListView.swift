@@ -38,7 +38,11 @@ struct FilmsListView: View {
 
   var resultsSection: some View {
     Section {
-      ForEach(viewModel.films, content: FilmResultView.init(viewModel:))
+      ForEach(viewModel.films, id: \.self) { film in
+        NavigationLink(destination: self.viewModel.filmView(forFilm: film)) {
+          FilmResultView(viewModel: FilmResultViewModel(film: film))
+        }
+      }
     }
   }
 }

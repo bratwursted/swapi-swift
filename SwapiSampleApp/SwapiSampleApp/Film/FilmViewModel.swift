@@ -64,6 +64,11 @@ final class FilmViewModel: ObservableObject {
     film.openingCrawl.firstSentence ?? "n/a"
   }
 
+  func filmInfoView() -> FilmInfoView {
+    let vm = FilmInfoViewModel(film: film)
+    return FilmInfoView(viewModel: vm)
+  }
+
   private var releaseDate: Date {
     formatter.date(from: film.releaseDate)!
   }

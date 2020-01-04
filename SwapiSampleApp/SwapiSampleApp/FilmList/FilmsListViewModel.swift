@@ -12,7 +12,7 @@ import SwapiSwift
 
 final class FilmsListViewModel: ObservableObject, Identifiable {
 
-  @Published var films: [FilmResultViewModel] = []
+  @Published var films: [Film] = []
 
   private let dataService: SwapiService
 
@@ -29,7 +29,6 @@ final class FilmsListViewModel: ObservableObject, Identifiable {
           .sorted(by: { film1, film2 in
             film1.episodeId < film2.episodeId
           })
-          .map(FilmResultViewModel.init)
     }
     .receive(on: DispatchQueue.main)
     .sink(receiveCompletion: { completion in
@@ -40,9 +39,15 @@ final class FilmsListViewModel: ObservableObject, Identifiable {
       case .finished:
         break
       }
-    }, receiveValue: { viewModels in
-      self.films = viewModels
+    }, receiveValue: { films in
+      self.films = films
     })
       .store(in: &disposables)
+  }
+
+  func filmView(forFilm film: Film) -> FilmView {
+    let service = FilmGraphService(film: film)
+    let vm = FilmViewModel(filmService: service)
+    return FilmView(viewModel: vm)
   }
 }
