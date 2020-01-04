@@ -89,7 +89,7 @@ struct FilmView: View {
 
   var charactersSection: some View {
     Section(header: Text(HeaderTitle.characters.rawValue)) {
-      ForEach(0..<3) {
+      ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
         self.viewModel.characterRowView(forIndex: $0)
       }
     }
@@ -97,7 +97,7 @@ struct FilmView: View {
 
   var planetsSection: some View {
     Section(header: Text(HeaderTitle.planets.rawValue)) {
-      ForEach(0..<3) {
+      ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
       }
     }
@@ -105,7 +105,7 @@ struct FilmView: View {
 
   var speciesSection: some View {
     Section(header: Text(HeaderTitle.species.rawValue)) {
-      ForEach(0..<3) {
+      ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
       }
     }
@@ -113,7 +113,7 @@ struct FilmView: View {
 
   var starshipsSection: some View {
     Section(header: Text(HeaderTitle.starships.rawValue)) {
-      ForEach(0..<3) {
+      ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
     }
@@ -121,7 +121,7 @@ struct FilmView: View {
 
   var vehiclesSection: some View {
     Section(header: Text(HeaderTitle.vehicles.rawValue)) {
-      ForEach(0..<3) {
+      ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
       }
     }
@@ -131,6 +131,10 @@ struct FilmView: View {
     Section(header: Text(title.rawValue)) {
       Text("no results")
     }
+  }
+
+  func maximumRowIndex(_ array: [Any]) -> Int {
+    min(array.count, 3)
   }
 
 }
