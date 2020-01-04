@@ -80,7 +80,7 @@ struct FilmView: View {
   var planetsSection: some View {
     Section(header: Text(HeaderTitle.planets.rawValue)) {
       ForEach(0..<3) {
-        self.viewModel.planetRwoView(forIndex: $0)
+        self.viewModel.planetRowView(forIndex: $0)
       }
     }
   }

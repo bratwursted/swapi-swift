@@ -98,7 +98,7 @@ final class FilmViewModel: ObservableObject {
     return CharacterRowView(viewModel: vm)
   }
 
-  func planetRwoView(forIndex index: Int) -> PlanetRowView {
+  func planetRowView(forIndex index: Int) -> PlanetRowView {
     let planet = planets[index]
     let vm = PlanetRowViewModel(planet: planet)
     return PlanetRowView(viewModel: vm)
