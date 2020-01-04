@@ -11,14 +11,6 @@ import SwapiSwift
 
 struct FilmView: View {
 
-  enum HeaderTitle: String {
-    case characters = "Characters"
-    case planets = "Planets"
-    case species = "Species"
-    case starships = "Starships"
-    case vehicles = "Vehicles"
-  }
-
   @ObservedObject var viewModel: FilmViewModel
 
   var body: some View {
@@ -88,7 +80,7 @@ struct FilmView: View {
   }
 
   var charactersSection: some View {
-    Section(header: Text(HeaderTitle.characters.rawValue)) {
+    Section(header: header(with: .characters)) {
       ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
         self.viewModel.characterRowView(forIndex: $0)
       }
@@ -96,7 +88,7 @@ struct FilmView: View {
   }
 
   var planetsSection: some View {
-    Section(header: Text(HeaderTitle.planets.rawValue)) {
+    Section(header: header(with: .planets)) {
       ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
       }
@@ -104,7 +96,7 @@ struct FilmView: View {
   }
 
   var speciesSection: some View {
-    Section(header: Text(HeaderTitle.species.rawValue)) {
+    Section(header: header(with: .species)) {
       ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
       }
@@ -112,7 +104,7 @@ struct FilmView: View {
   }
 
   var starshipsSection: some View {
-    Section(header: Text(HeaderTitle.starships.rawValue)) {
+    Section(header: header(with: .starships)) {
       ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
@@ -120,7 +112,7 @@ struct FilmView: View {
   }
 
   var vehiclesSection: some View {
-    Section(header: Text(HeaderTitle.vehicles.rawValue)) {
+    Section(header: header(with: .vehicles)) {
       ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
       }
@@ -131,6 +123,11 @@ struct FilmView: View {
     Section(header: Text(title.rawValue)) {
       Text("no results")
     }
+  }
+
+  func header(with title: HeaderTitle) -> FilmHeaderView {
+    let vm = FilmHeaderViewModel(title: title, buttonStateClosure: { _ in })
+    return FilmHeaderView(viewModel: vm)
   }
 
   func maximumRowIndex(_ array: [Any]) -> Int {

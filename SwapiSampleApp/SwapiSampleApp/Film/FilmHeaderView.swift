@@ -9,13 +9,38 @@
 import SwiftUI
 
 struct FilmHeaderView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: FilmHeaderViewModel
+
+  var body: some View {
+    HStack {
+      Text(viewModel.headerTitle)
+        .font(.body)
+        .fontWeight(.semibold)
+      Spacer()
+      HStack {
+        Button(action: {
+          // noop
+        }, label: {
+          HStack {
+            Text("See all")
+              .font(.callout)
+            Image(systemName: "chevron.right")
+              .font(.footnote)
+          }
+        })
+      }
     }
+  }
 }
 
 struct FilmHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        FilmHeaderView()
+  static var previews: some View {
+    FilmHeaderView(viewModel: FilmHeaderViewModel(
+      title: .characters,
+      buttonStateClosure: { _ in
+        // noop
     }
+    ))
+  }
 }
