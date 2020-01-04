@@ -54,6 +54,10 @@ struct FilmView: View {
     }
   }
 
+}
+
+extension FilmView {
+
   var basicInfoSection: some View {
     Section {
       NavigationLink(destination: viewModel.filmInfoView()) {
@@ -80,7 +84,7 @@ struct FilmView: View {
   }
 
   var charactersSection: some View {
-    Section(header: header(with: .characters)) {
+    Section(header: sectionHeader(with: .characters)) {
       ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
         self.viewModel.characterRowView(forIndex: $0)
       }
@@ -88,7 +92,7 @@ struct FilmView: View {
   }
 
   var planetsSection: some View {
-    Section(header: header(with: .planets)) {
+    Section(header: sectionHeader(with: .planets)) {
       ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
       }
@@ -96,7 +100,7 @@ struct FilmView: View {
   }
 
   var speciesSection: some View {
-    Section(header: header(with: .species)) {
+    Section(header: sectionHeader(with: .species)) {
       ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
       }
@@ -104,7 +108,7 @@ struct FilmView: View {
   }
 
   var starshipsSection: some View {
-    Section(header: header(with: .starships)) {
+    Section(header: sectionHeader(with: .starships)) {
       ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
@@ -112,7 +116,7 @@ struct FilmView: View {
   }
 
   var vehiclesSection: some View {
-    Section(header: header(with: .vehicles)) {
+    Section(header: sectionHeader(with: .vehicles)) {
       ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
       }
@@ -125,7 +129,7 @@ struct FilmView: View {
     }
   }
 
-  func header(with title: HeaderTitle) -> FilmHeaderView {
+  func sectionHeader(with title: HeaderTitle) -> FilmHeaderView {
     let vm = FilmHeaderViewModel(title: title, buttonStateClosure: { _ in })
     return FilmHeaderView(viewModel: vm)
   }
