@@ -210,16 +210,16 @@
 		8FAE12CD23BFB04600F0D03D /* Film */ = {
 			isa = PBXGroup;
 			children = (
+				8F07F78A23C11B0700E9EF37 /* CharacterRowView.swift */,
+				8F07F78823C10F5000E9EF37 /* Film+Strings.swift */,
 				8F07F78223BFE58800E9EF37 /* FilmInfoView.swift */,
 				8F07F78423BFE59600E9EF37 /* FilmInfoViewModel.swift */,
 				8FAE12C923BFB02E00F0D03D /* FilmView.swift */,
-				8F07F79223C126E800E9EF37 /* VehicleRowView.swift */,
-				8F07F79023C1248600E9EF37 /* StarshipRowView.swift */,
-				8F07F78E23C1226B00E9EF37 /* SpeciesRowView.swift */,
-				8F07F78C23C11F2800E9EF37 /* PlanetRowView.swift */,
-				8F07F78A23C11B0700E9EF37 /* CharacterRowView.swift */,
 				8FAE12CB23BFB03B00F0D03D /* FilmViewModel.swift */,
-				8F07F78823C10F5000E9EF37 /* Film+Strings.swift */,
+				8F07F78C23C11F2800E9EF37 /* PlanetRowView.swift */,
+				8F07F78E23C1226B00E9EF37 /* SpeciesRowView.swift */,
+				8F07F79023C1248600E9EF37 /* StarshipRowView.swift */,
+				8F07F79223C126E800E9EF37 /* VehicleRowView.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
