@@ -37,6 +37,12 @@ struct FilmView: View {
       } else {
         planetsSection
       }
+
+      if viewModel.species.isEmpty {
+        emptySection(withTitle: HeaderTitle.species.rawValue)
+      } else {
+        speciesSection
+      }
     }
     .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
     .onAppear {
@@ -81,6 +87,14 @@ struct FilmView: View {
     Section(header: Text(HeaderTitle.planets.rawValue)) {
       ForEach(0..<3) {
         self.viewModel.planetRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var speciesSection: some View {
+    Section(header: Text(HeaderTitle.species.rawValue)) {
+      ForEach(0..<3) {
+        self.viewModel.speciesRowView(forIndex: $0)
       }
     }
   }
