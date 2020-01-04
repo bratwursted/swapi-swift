@@ -9,6 +9,7 @@
 import Foundation
 import SwapiSwift
 import Combine
+import SwiftUI
 
 final class FilmViewModel: ObservableObject {
 
@@ -24,11 +25,15 @@ final class FilmViewModel: ObservableObject {
     return formatter
   }()
 
-  private let filmService: FilmGraphService
+  private var disposables = Set<AnyCancellable>()
+
+  @ObservedObject private var filmService: FilmGraphService
 
   private var film: Film {
     filmService.film
   }
+
+  @Published var characters: [Person] = []
 
   init(
     filmService: FilmGraphService
@@ -38,6 +43,14 @@ final class FilmViewModel: ObservableObject {
 
   func fetchFilmProperties() {
     filmService.fetchAssociatedProperties()
+
+    filmService
+      .$characters
+      .receive(on: DispatchQueue.main)
+      .sink(receiveValue: { people in
+        self.characters = people
+      })
+    .store(in: &disposables)
   }
 
   var episideTitle: String {
@@ -67,6 +80,12 @@ final class FilmViewModel: ObservableObject {
   func filmInfoView() -> FilmInfoView {
     let vm = FilmInfoViewModel(film: film)
     return FilmInfoView(viewModel: vm)
+  }
+
+  func characterRowView(forIndex index: Int) -> CharacterRowView {
+    let character = characters[index]
+    let vm = CharacterRowViewModel(character: character)
+    return CharacterRowView(viewModel: vm)
   }
 
   private var releaseDate: Date {

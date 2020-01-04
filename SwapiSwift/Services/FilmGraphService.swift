@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-public final class FilmGraphService: GraphService {
+public final class FilmGraphService: GraphService, ObservableObject {
 
   public let film: Film
 

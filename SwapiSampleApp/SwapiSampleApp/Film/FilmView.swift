@@ -11,14 +11,30 @@ import SwapiSwift
 
 struct FilmView: View {
 
-  let viewModel: FilmViewModel
+  private enum HeaderTitle: String {
+    case characters = "Characters"
+    case planets = "Planets"
+    case species = "Species"
+    case starships = "Starships"
+    case vehicles = "Vehicles"
+  }
+
+  @ObservedObject var viewModel: FilmViewModel
 
   var body: some View {
     List {
       basicInfoSection
       productionSection
+      if viewModel.characters.isEmpty {
+        emptySection(withTitle: HeaderTitle.characters.rawValue)
+      } else {
+        charactersSection
+      }
     }
     .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
+    .onAppear {
+      self.viewModel.fetchFilmProperties()
+    }
   }
 
   var basicInfoSection: some View {
@@ -43,6 +59,20 @@ struct FilmView: View {
         Text("Director: \(viewModel.director)")
         Text("Producers: \(viewModel.producers)")
       }
+    }
+  }
+
+  var charactersSection: some View {
+    Section(header: Text(HeaderTitle.characters.rawValue)) {
+      ForEach(0..<3) {
+        self.viewModel.characterRowView(forIndex: $0)
+      }
+    }
+  }
+
+  func emptySection(withTitle title: String) -> some View {
+    Section(header: Text(title)) {
+      Text("no results")
     }
   }
 
