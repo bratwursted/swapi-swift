@@ -11,7 +11,7 @@ import SwapiSwift
 
 struct FilmView: View {
 
-  private enum HeaderTitle: String {
+  enum HeaderTitle: String {
     case characters = "Characters"
     case planets = "Planets"
     case species = "Species"
@@ -27,31 +27,31 @@ struct FilmView: View {
       productionSection
 
       if viewModel.characters.isEmpty {
-        emptySection(withTitle: HeaderTitle.characters.rawValue)
+        emptySection(withTitle: .characters)
       } else {
         charactersSection
       }
 
       if viewModel.planets.isEmpty {
-        emptySection(withTitle: HeaderTitle.planets.rawValue)
+        emptySection(withTitle: .planets)
       } else {
         planetsSection
       }
 
       if viewModel.species.isEmpty {
-        emptySection(withTitle: HeaderTitle.species.rawValue)
+        emptySection(withTitle: .species)
       } else {
         speciesSection
       }
 
       if viewModel.starships.isEmpty {
-        emptySection(withTitle: HeaderTitle.starships.rawValue)
+        emptySection(withTitle: .starships)
       } else {
         starshipsSection
       }
 
       if viewModel.vehicles.isEmpty {
-        emptySection(withTitle: HeaderTitle.vehicles.rawValue)
+        emptySection(withTitle: .vehicles)
       } else {
         vehiclesSection
       }
@@ -127,8 +127,8 @@ struct FilmView: View {
     }
   }
 
-  func emptySection(withTitle title: String) -> some View {
-    Section(header: Text(title)) {
+  func emptySection(withTitle title: HeaderTitle) -> some View {
+    Section(header: Text(title.rawValue)) {
       Text("no results")
     }
   }
