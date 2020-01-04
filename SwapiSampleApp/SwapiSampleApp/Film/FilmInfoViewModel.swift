@@ -26,6 +26,6 @@ final class FilmInfoViewModel {
   }
 
   var crawl: String {
-    film.openingCrawl
+    film.cleanCrawlString
   }
 }

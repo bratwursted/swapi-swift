@@ -61,7 +61,7 @@ final class FilmViewModel: ObservableObject {
   }
 
   var crawlSnipet: String {
-    film.openingCrawl.firstSentence ?? "n/a"
+    film.cleanCrawlString.firstSentence ?? "n/a"
   }
 
   func filmInfoView() -> FilmInfoView {
