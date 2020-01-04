@@ -35,6 +35,8 @@ final class FilmViewModel: ObservableObject {
 
   @Published var characters: [Person] = []
 
+  @Published var planets: [Planet] = []
+
   init(
     filmService: FilmGraphService
   ) {
@@ -50,6 +52,14 @@ final class FilmViewModel: ObservableObject {
       .sink(receiveValue: { people in
         self.characters = people
       })
+    .store(in: &disposables)
+
+    filmService
+    .$planets
+      .receive(on: DispatchQueue.main)
+      .sink { planets in
+        self.planets = planets
+    }
     .store(in: &disposables)
   }
 
@@ -86,6 +96,12 @@ final class FilmViewModel: ObservableObject {
     let character = characters[index]
     let vm = CharacterRowViewModel(character: character)
     return CharacterRowView(viewModel: vm)
+  }
+
+  func planetRwoView(forIndex index: Int) -> PlanetRowView {
+    let planet = planets[index]
+    let vm = PlanetRowViewModel(planet: planet)
+    return PlanetRowView(viewModel: vm)
   }
 
   private var releaseDate: Date {

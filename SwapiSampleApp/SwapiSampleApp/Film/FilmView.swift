@@ -25,10 +25,17 @@ struct FilmView: View {
     List {
       basicInfoSection
       productionSection
+
       if viewModel.characters.isEmpty {
         emptySection(withTitle: HeaderTitle.characters.rawValue)
       } else {
         charactersSection
+      }
+
+      if viewModel.planets.isEmpty {
+        emptySection(withTitle: HeaderTitle.planets.rawValue)
+      } else {
+        planetsSection
       }
     }
     .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
@@ -66,6 +73,14 @@ struct FilmView: View {
     Section(header: Text(HeaderTitle.characters.rawValue)) {
       ForEach(0..<3) {
         self.viewModel.characterRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var planetsSection: some View {
+    Section(header: Text(HeaderTitle.planets.rawValue)) {
+      ForEach(0..<3) {
+        self.viewModel.planetRwoView(forIndex: $0)
       }
     }
   }
