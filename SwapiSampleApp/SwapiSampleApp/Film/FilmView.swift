@@ -103,7 +103,7 @@ extension FilmView {
       Spacer()
       if viewModel.characters.count > FilmView.maxSectionItems {
         NavigationLink(
-          destination: CharacterList(),
+          destination: viewModel.characterList,
           tag: NavigationDestination.characters.tag,
           selection: $navigationTag) {
             headerButton(forDestination: .characters)

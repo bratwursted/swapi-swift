@@ -59,7 +59,9 @@ final class FilmViewModel: ObservableObject {
       .$characters
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { people in
-        self.characters = people
+        self.characters = people.sorted(by: { (person1, person2) -> Bool in
+          person1.name < person2.name
+        })
       })
     .store(in: &disposables)
 
@@ -150,6 +152,10 @@ final class FilmViewModel: ObservableObject {
   func vehicleRowView(forIndex index: Int) -> VehicleRowView {
     let vm = VehicleRowViewModel(vehicle: vehicles[index])
     return VehicleRowView(viewModel: vm)
+  }
+
+  var characterList: CharacterList {
+    CharacterList(viewModel: CharacterListViewModel(characters: characters))
   }
 
   private var releaseDate: Date {

@@ -7,15 +7,26 @@
 //
 
 import SwiftUI
+import SwapiSwift
 
 struct CharacterList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: CharacterListViewModel
+
+  var body: some View {
+    List {
+      ForEach(viewModel.characters, id: \.self) { character in
+        self.viewModel.rowView(for: character)
+      }
     }
+    .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
+  }
 }
 
 struct CharacterList_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterList()
-    }
+  static var previews: some View {
+    CharacterList(viewModel: CharacterListViewModel(
+      characters: newHopeData[.people] as! [Person]
+    ))
+  }
 }
