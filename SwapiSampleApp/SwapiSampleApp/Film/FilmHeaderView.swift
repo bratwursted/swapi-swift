@@ -18,9 +18,9 @@ struct FilmHeaderView: View {
         .font(.body)
         .fontWeight(.semibold)
       Spacer()
-      HStack {
+      if viewModel.showsButton {
         Button(action: {
-          // noop
+          self.viewModel.seeAllButtonAction()
         }, label: {
           HStack {
             Text("See all")
@@ -36,11 +36,6 @@ struct FilmHeaderView: View {
 
 struct FilmHeaderView_Previews: PreviewProvider {
   static var previews: some View {
-    FilmHeaderView(viewModel: FilmHeaderViewModel(
-      title: .characters,
-      buttonStateClosure: { _ in
-        // noop
-    }
-    ))
+    FilmHeaderView(viewModel: FilmHeaderViewModel(title: .characters, showsButton: true))
   }
 }

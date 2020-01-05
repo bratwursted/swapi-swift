@@ -21,18 +21,22 @@ final class FilmHeaderViewModel {
 
   private let title: HeaderTitle
 
-  private let buttonStateClosure: (Bool) -> Void
+  let showsButton: Bool
 
   init(
     title: HeaderTitle,
-    buttonStateClosure: @escaping (Bool) -> Void
+    showsButton: Bool
   ) {
     self.title = title
-    self.buttonStateClosure = buttonStateClosure
+    self.showsButton = showsButton
   }
 
   var headerTitle: String {
     title.rawValue
+  }
+
+  func seeAllButtonAction() {
+    
   }
 
 }

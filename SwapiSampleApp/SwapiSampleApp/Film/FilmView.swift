@@ -11,6 +11,8 @@ import SwapiSwift
 
 struct FilmView: View {
 
+  static let maxSectionItems = 3
+
   @ObservedObject var viewModel: FilmViewModel
 
   var body: some View {
@@ -84,7 +86,9 @@ extension FilmView {
   }
 
   var charactersSection: some View {
-    Section(header: sectionHeader(with: .characters)) {
+    Section(header: sectionHeader(
+      with: .characters,
+      itemCount: self.viewModel.characters.count)) {
       ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
         self.viewModel.characterRowView(forIndex: $0)
       }
@@ -92,7 +96,10 @@ extension FilmView {
   }
 
   var planetsSection: some View {
-    Section(header: sectionHeader(with: .planets)) {
+    Section(header: sectionHeader(
+      with: .planets,
+      itemCount: self.viewModel.planets.count
+    )) {
       ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
       }
@@ -100,7 +107,10 @@ extension FilmView {
   }
 
   var speciesSection: some View {
-    Section(header: sectionHeader(with: .species)) {
+    Section(header: sectionHeader(
+      with: .species,
+      itemCount: self.viewModel.species.count
+    )) {
       ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
       }
@@ -108,7 +118,10 @@ extension FilmView {
   }
 
   var starshipsSection: some View {
-    Section(header: sectionHeader(with: .starships)) {
+    Section(header: sectionHeader(
+      with: .starships,
+      itemCount: self.viewModel.starships.count
+    )) {
       ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
@@ -116,7 +129,10 @@ extension FilmView {
   }
 
   var vehiclesSection: some View {
-    Section(header: sectionHeader(with: .vehicles)) {
+    Section(header: sectionHeader(
+      with: .vehicles,
+      itemCount: self.viewModel.vehicles.count
+    )) {
       ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
       }
@@ -129,13 +145,13 @@ extension FilmView {
     }
   }
 
-  func sectionHeader(with title: HeaderTitle) -> FilmHeaderView {
-    let vm = FilmHeaderViewModel(title: title, buttonStateClosure: { _ in })
+  func sectionHeader(with title: HeaderTitle, itemCount: Int) -> FilmHeaderView {
+    let vm = FilmHeaderViewModel(title: title, showsButton: itemCount > FilmView.maxSectionItems)
     return FilmHeaderView(viewModel: vm)
   }
 
   func maximumRowIndex(_ array: [Any]) -> Int {
-    min(array.count, 3)
+    min(array.count, FilmView.maxSectionItems)
   }
 
 }
