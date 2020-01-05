@@ -8,9 +8,8 @@
 
 import Foundation
 import SwapiSwift
-import Combine
 
-final class CharacterListViewModel: ObservableObject {
+final class CharacterListViewModel {
 
   let characters: [Person]
 
