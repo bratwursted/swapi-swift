@@ -17,9 +17,9 @@ final class CharacterListViewModel {
     self.characters = characters
   }
 
-  func rowView(for character: Person) -> CharacterRowView {
-    let vm = CharacterRowViewModel(character: character)
-    return CharacterRowView(viewModel: vm)
+  func rowView(for character: Person) -> PersonRowView {
+    let vm = PersonRowViewModel(character: character)
+    return PersonRowView(viewModel: vm)
   }
 
   var viewTitle: String {

@@ -135,10 +135,10 @@ final class FilmViewModel: ObservableObject {
     return FilmInfoView(viewModel: vm)
   }
 
-  func characterRowView(forIndex index: Int) -> CharacterRowView {
+  func characterRowView(forIndex index: Int) -> PersonRowView {
     let character = characters[index]
-    let vm = CharacterRowViewModel(character: character)
-    return CharacterRowView(viewModel: vm)
+    let vm = PersonRowViewModel(character: character)
+    return PersonRowView(viewModel: vm)
   }
 
   func planetRowView(forIndex index: Int) -> PlanetRowView {

@@ -1,5 +1,5 @@
 //
-//  CharacterRowView.swift
+//  PersonRowView.swift
 //  SwapiSampleApp
 //
 //  Created by Joe Bramhall on 1/4/20.
@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import SwapiSwift
 
-final class CharacterRowViewModel {
+final class PersonRowViewModel {
   private let character: Person
 
   init(character: Person) {
@@ -22,9 +22,9 @@ final class CharacterRowViewModel {
   }
 }
 
-struct CharacterRowView: View {
+struct PersonRowView: View {
 
-  let viewModel: CharacterRowViewModel
+  let viewModel: PersonRowViewModel
 
   var body: some View {
     Text(viewModel.name)
