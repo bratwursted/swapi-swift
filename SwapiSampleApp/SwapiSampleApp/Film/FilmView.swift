@@ -15,6 +15,8 @@ struct FilmView: View {
 
   @ObservedObject var viewModel: FilmViewModel
 
+  @State var navigationTag: Int?
+
   var body: some View {
     List {
       basicInfoSection
@@ -52,7 +54,9 @@ struct FilmView: View {
     }
     .navigationBarTitle(Text(viewModel.filmTitle), displayMode: .inline)
     .onAppear {
-      self.viewModel.fetchFilmProperties()
+      if self.viewModel.needsAssociatedProperties {
+        self.viewModel.fetchFilmProperties()
+      }
     }
   }
 
@@ -86,20 +90,30 @@ extension FilmView {
   }
 
   var charactersSection: some View {
-    Section(header: sectionHeader(
-      with: .characters,
-      itemCount: self.viewModel.characters.count)) {
+    Section(header: charactersHeader) {
       ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
         self.viewModel.characterRowView(forIndex: $0)
       }
     }
   }
 
+  var charactersHeader: some View {
+    HStack {
+      Text(NavigationDestination.characters.title)
+      Spacer()
+      if viewModel.characters.count > FilmView.maxSectionItems {
+        NavigationLink(
+          destination: CharacterList(),
+          tag: NavigationDestination.characters.tag,
+          selection: $navigationTag) {
+            headerButton(forDestination: .characters)
+        }
+      }
+    }
+  }
+
   var planetsSection: some View {
-    Section(header: sectionHeader(
-      with: .planets,
-      itemCount: self.viewModel.planets.count
-    )) {
+    Section(header: Text(NavigationDestination.planets.title)) {
       ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
       }
@@ -107,10 +121,7 @@ extension FilmView {
   }
 
   var speciesSection: some View {
-    Section(header: sectionHeader(
-      with: .species,
-      itemCount: self.viewModel.species.count
-    )) {
+    Section(header: Text(NavigationDestination.species.title)) {
       ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
       }
@@ -118,10 +129,7 @@ extension FilmView {
   }
 
   var starshipsSection: some View {
-    Section(header: sectionHeader(
-      with: .starships,
-      itemCount: self.viewModel.starships.count
-    )) {
+    Section(header: Text(NavigationDestination.starships.title)) {
       ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
@@ -129,25 +137,25 @@ extension FilmView {
   }
 
   var vehiclesSection: some View {
-    Section(header: sectionHeader(
-      with: .vehicles,
-      itemCount: self.viewModel.vehicles.count
-    )) {
+    Section(header: Text(NavigationDestination.vehicles.title)) {
       ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
       }
     }
   }
 
-  func emptySection(withTitle title: HeaderTitle) -> some View {
+  func emptySection(withTitle title: NavigationDestination.HeaderTitle) -> some View {
     Section(header: Text(title.rawValue)) {
       Text("no results")
     }
   }
 
-  func sectionHeader(with title: HeaderTitle, itemCount: Int) -> FilmHeaderView {
-    let vm = FilmHeaderViewModel(title: title, showsButton: itemCount > FilmView.maxSectionItems)
-    return FilmHeaderView(viewModel: vm)
+  func headerButton(forDestination destination: NavigationDestination) -> Button<HeaderButtonView> {
+    Button(action: {
+      self.navigationTag = destination.tag
+    }) {
+      HeaderButtonView()
+    }
   }
 
   func maximumRowIndex(_ array: [Any]) -> Int {

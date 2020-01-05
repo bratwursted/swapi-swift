@@ -43,6 +43,8 @@ final class FilmViewModel: ObservableObject {
 
   @Published var vehicles: [Vehicle] = []
 
+  var needsAssociatedProperties = true
+
   init(
     filmService: FilmGraphService
   ) {
@@ -51,6 +53,7 @@ final class FilmViewModel: ObservableObject {
 
   func fetchFilmProperties() {
     filmService.fetchAssociatedProperties()
+    needsAssociatedProperties = false
 
     filmService
       .$characters
