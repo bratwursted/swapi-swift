@@ -7,15 +7,26 @@
 //
 
 import SwiftUI
+import SwapiSwift
 
 struct SpeciesList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: SpeciesListViewModel
+
+  var body: some View {
+    List {
+      ForEach(viewModel.species, id: \.self) {
+        self.viewModel.rowView(for: $0)
+      }
     }
+    .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
+  }
 }
 
 struct SpeciesList_Previews: PreviewProvider {
-    static var previews: some View {
-        SpeciesList()
-    }
+  static var previews: some View {
+    SpeciesList(viewModel: SpeciesListViewModel(
+      species: newHopeData[.species] as! [Species]
+    ))
+  }
 }

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import SwapiSwift
+
+final class SpeciesListViewModel {
+
+  let species: [Species]
+
+  init(species: [Species]) {
+    self.species = species
+  }
+
+  func rowView(for aSpecies: Species) -> SpeciesRowView {
+    SpeciesRowView(viewModel: SpeciesRowViewModel(species: aSpecies))
+  }
+
+  var viewTitle: String {
+    "Species"
+  }
+}
