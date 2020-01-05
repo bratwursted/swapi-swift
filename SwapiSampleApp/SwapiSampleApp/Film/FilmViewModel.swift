@@ -178,6 +178,10 @@ final class FilmViewModel: ObservableObject {
     StarshipList(viewModel: StarshipListViewModel(starships: starships))
   }
 
+  var vehicleList: VehicleList {
+    VehicleList(viewModel: VehicleListViewModel(vehicles: vehicles))
+  }
+
   private var releaseDate: Date {
     formatter.date(from: film.releaseDate)!
   }

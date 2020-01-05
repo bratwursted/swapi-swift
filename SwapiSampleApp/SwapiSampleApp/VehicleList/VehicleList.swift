@@ -7,15 +7,26 @@
 //
 
 import SwiftUI
+import SwapiSwift
 
 struct VehicleList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: VehicleListViewModel
+
+  var body: some View {
+    List {
+      ForEach(viewModel.vehicles, id: \.self) {
+        self.viewModel.rowView(for: $0)
+      }
     }
+    .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
+  }
 }
 
 struct VehicleList_Previews: PreviewProvider {
-    static var previews: some View {
-        VehicleList()
-    }
+  static var previews: some View {
+    VehicleList(viewModel: VehicleListViewModel(
+      vehicles: newHopeData[.vehicles] as! [Vehicle]
+    ))
+  }
 }
