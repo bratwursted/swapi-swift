@@ -13,6 +13,31 @@ var sampleFilms: ResourceRoot<Film> {
   load("films")
 }
 
+var samplePeople: ResourceRoot<Person> {
+  load("people")
+}
+
+var samplePlanets: ResourceRoot<Planet> {
+  load("planets")
+}
+
+func samplePlanet(_ name: String) -> Planet {
+  load(name)
+}
+
+var lukeData: MockGraphDataService.DataStore {
+  let films: [Film] = load("luke_films")
+  let species: [Species] = load("luke_species")
+  let starships: [Starship] = load("luke_starships")
+  let vehicles: [Vehicle] = load("luke_vehicles")
+  return [
+    .films: films,
+    .species: species,
+    .starships: starships,
+    .vehicles: vehicles
+  ]
+}
+
 var newHopeData: MockGraphDataService.DataStore {
   return [
     .people: newHopeCharacters,

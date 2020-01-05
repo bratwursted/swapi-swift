@@ -346,8 +346,14 @@ public struct MockGraphDataService: SwapiService {
 
   private let dataStore: DataStore
 
-  public init(dataStore: DataStore) {
+  private let homeworld: Planet?
+
+  public init(
+    dataStore: DataStore,
+    homeworld: Planet? = nil
+  ) {
     self.dataStore = dataStore
+    self.homeworld = homeworld
   }
 
   public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
@@ -363,7 +369,10 @@ public struct MockGraphDataService: SwapiService {
   }
 
   public func planet(withResourceUrl url: String?) -> AnyPublisher<Planet, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
+    guard let planet = homeworld else {
+      fatalError("Expected type Planet")
+    }
+    return Result.Publisher(planet).eraseToAnyPublisher()
   }
 
   public func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError> {

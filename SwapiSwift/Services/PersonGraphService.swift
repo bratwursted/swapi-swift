@@ -9,35 +9,36 @@
 import Foundation
 import Combine
 
-final class PersonGraphService: GraphService {
+public final class PersonGraphService: GraphService, ObservableObject {
 
-  let person: Person
+  public let person: Person
 
   // Associated properties
 
-  @Published var films: [Film] = []
+  @Published public var films: [Film] = []
 
-  @Published var starships: [Starship] = []
+  @Published public var starships: [Starship] = []
 
-  @Published var vehicles: [Vehicle] = []
+  @Published public var vehicles: [Vehicle] = []
 
-  @Published var species: [Species] = []
+  @Published public var species: [Species] = []
 
-  @Published var homeworld: Planet?
+  @Published public var homeworld: Planet?
 
   private let dataService: SwapiService
 
   private var disposables = Set<AnyCancellable>()
 
-  init(
+  public init(
     person: Person,
-    dataService: SwapiService = DataService()) {
+    dataService: SwapiService = DataService()
+  ) {
     self.person = person
     self.dataService = dataService
   }
 
   // swiftlint:disable:next function_body_length
-  func fetchAssociatedProperties() {
+  public func fetchAssociatedProperties() {
     // get homeworld
 
     dataService.planet(withResourceUrl: person.homeworld)
