@@ -41,6 +41,8 @@
 		8FAE12CC23BFB03B00F0D03D /* FilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAE12CB23BFB03B00F0D03D /* FilmViewModel.swift */; };
 		8FD1C89E23C23601001E13D2 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C89D23C23601001E13D2 /* NavigationDestination.swift */; };
 		8FD1C8A023C23652001E13D2 /* HeaderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C89F23C23652001E13D2 /* HeaderButtonView.swift */; };
+		8FD1C8A223C23706001E13D2 /* PlanetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C8A123C23706001E13D2 /* PlanetList.swift */; };
+		8FD1C8A423C23713001E13D2 /* PlanetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C8A323C23712001E13D2 /* PlanetListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		8FAE12CB23BFB03B00F0D03D /* FilmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModel.swift; sourceTree = "<group>"; };
 		8FD1C89D23C23601001E13D2 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		8FD1C89F23C23652001E13D2 /* HeaderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderButtonView.swift; sourceTree = "<group>"; };
+		8FD1C8A123C23706001E13D2 /* PlanetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetList.swift; sourceTree = "<group>"; };
+		8FD1C8A323C23712001E13D2 /* PlanetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				8F535D9223BF759C00E72BF9 /* ContentView.swift */,
 				8FD1C89D23C23601001E13D2 /* NavigationDestination.swift */,
 				8FD1C89F23C23652001E13D2 /* HeaderButtonView.swift */,
+				8FD1C8A523C2371B001E13D2 /* PlanetList */,
 				8F07F79A23C15B1600E9EF37 /* CharacterList */,
 				8FAE12CD23BFB04600F0D03D /* Film */,
 				8FAE12C823BFAF4100F0D03D /* FilmList */,
@@ -233,12 +238,21 @@
 				8F07F78423BFE59600E9EF37 /* FilmInfoViewModel.swift */,
 				8FAE12C923BFB02E00F0D03D /* FilmView.swift */,
 				8FAE12CB23BFB03B00F0D03D /* FilmViewModel.swift */,
-				8F07F78C23C11F2800E9EF37 /* PlanetRowView.swift */,
 				8F07F78E23C1226B00E9EF37 /* SpeciesRowView.swift */,
 				8F07F79023C1248600E9EF37 /* StarshipRowView.swift */,
 				8F07F79223C126E800E9EF37 /* VehicleRowView.swift */,
 			);
 			path = Film;
+			sourceTree = "<group>";
+		};
+		8FD1C8A523C2371B001E13D2 /* PlanetList */ = {
+			isa = PBXGroup;
+			children = (
+				8FD1C8A123C23706001E13D2 /* PlanetList.swift */,
+				8FD1C8A323C23712001E13D2 /* PlanetListViewModel.swift */,
+				8F07F78C23C11F2800E9EF37 /* PlanetRowView.swift */,
+			);
+			path = PlanetList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +370,10 @@
 				8FD1C89E23C23601001E13D2 /* NavigationDestination.swift in Sources */,
 				8F07F78323BFE58800E9EF37 /* FilmInfoView.swift in Sources */,
 				8FAE12CA23BFB02E00F0D03D /* FilmView.swift in Sources */,
+				8FD1C8A223C23706001E13D2 /* PlanetList.swift in Sources */,
 				8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */,
 				8FAE12C723BFAE7600F0D03D /* FilmResultViewModel.swift in Sources */,
+				8FD1C8A423C23713001E13D2 /* PlanetListViewModel.swift in Sources */,
 				8FD1C8A023C23652001E13D2 /* HeaderButtonView.swift in Sources */,
 				8F535DB823BF77BC00E72BF9 /* SampleData.swift in Sources */,
 				8F07F78D23C11F2800E9EF37 /* PlanetRowView.swift in Sources */,
