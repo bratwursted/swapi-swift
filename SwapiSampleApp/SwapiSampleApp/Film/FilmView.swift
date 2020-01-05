@@ -159,17 +159,47 @@ extension FilmView {
   }
 
   var starshipsSection: some View {
-    Section(header: Text(NavigationDestination.starships.title)) {
+    Section(header: starshipsHeader) {
       ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
         self.viewModel.starshipRowView(forIndex: $0)
       }
     }
   }
 
+  var starshipsHeader: some View {
+    HStack {
+      Text(NavigationDestination.starships.title)
+      Spacer()
+      if viewModel.starships.count > FilmView.maxSectionItems {
+        NavigationLink(
+          destination: StarshipList(),
+          tag: NavigationDestination.starships.tag,
+          selection: $navigationTag) {
+            headerButton(forDestination: .starships)
+        }
+      }
+    }
+  }
+
   var vehiclesSection: some View {
-    Section(header: Text(NavigationDestination.vehicles.title)) {
+    Section(header: vehiclesSectionHeader) {
       ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
         self.viewModel.vehicleRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var vehiclesSectionHeader: some View {
+    HStack {
+      Text(NavigationDestination.vehicles.title)
+      if viewModel.vehicles.count > FilmView.maxSectionItems {
+        Spacer()
+        NavigationLink(
+          destination: VehicleList(),
+          tag: NavigationDestination.vehicles.tag,
+          selection: $navigationTag) {
+            headerButton(forDestination: .vehicles)
+        }
       }
     }
   }
