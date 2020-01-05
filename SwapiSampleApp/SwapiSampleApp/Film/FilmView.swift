@@ -136,9 +136,24 @@ extension FilmView {
   }
 
   var speciesSection: some View {
-    Section(header: Text(NavigationDestination.species.title)) {
+    Section(header: speciesHeader) {
       ForEach(0..<maximumRowIndex(self.viewModel.species)) {
         self.viewModel.speciesRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var speciesHeader: some View {
+    HStack {
+      Text(NavigationDestination.species.title)
+      Spacer()
+      if viewModel.species.count > FilmView.maxSectionItems {
+        NavigationLink(
+          destination: SpeciesList(),
+          tag: NavigationDestination.species.tag,
+          selection: $navigationTag) {
+            headerButton(forDestination: .species)
+        }
       }
     }
   }
