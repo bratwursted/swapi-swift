@@ -126,7 +126,7 @@ extension FilmView {
       Spacer()
       if viewModel.planets.count > FilmView.maxSectionItems {
         NavigationLink(
-          destination: PlanetList(),
+          destination: viewModel.planetList,
           tag: NavigationDestination.planets.tag,
           selection: $navigationTag) {
             headerButton(forDestination: .planets)

@@ -7,15 +7,24 @@
 //
 
 import SwiftUI
+import SwapiSwift
 
 struct PlanetList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: PlanetListViewModel
+
+  var body: some View {
+    List {
+      ForEach(viewModel.planets, id: \.self) { planet in
+        self.viewModel.rowView(for: planet)
+      }
     }
+    .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
+  }
 }
 
 struct PlanetList_Previews: PreviewProvider {
-    static var previews: some View {
-        PlanetList()
-    }
+  static var previews: some View {
+    PlanetList(viewModel: PlanetListViewModel(planets: newHopeData[.planets] as! [Planet]))
+  }
 }

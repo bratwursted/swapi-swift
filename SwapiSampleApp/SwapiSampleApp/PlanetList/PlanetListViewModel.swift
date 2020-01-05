@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import SwapiSwift
+
+final class PlanetListViewModel {
+
+  let planets: [Planet]
+
+  init(planets: [Planet]) {
+    self.planets = planets
+  }
+
+  func rowView(for planet: Planet) -> PlanetRowView {
+    let vm = PlanetRowViewModel(planet: planet)
+    return PlanetRowView(viewModel: vm)
+  }
+
+  var viewTitle: String {
+    "Planets"
+  }
+}

@@ -69,7 +69,9 @@ final class FilmViewModel: ObservableObject {
     .$planets
       .receive(on: DispatchQueue.main)
       .sink { planets in
-        self.planets = planets
+        self.planets = planets.sorted(by: { (planet1, planet2) -> Bool in
+          planet1.name < planet2.name
+        })
     }
     .store(in: &disposables)
 
@@ -156,6 +158,10 @@ final class FilmViewModel: ObservableObject {
 
   var characterList: CharacterList {
     CharacterList(viewModel: CharacterListViewModel(characters: characters))
+  }
+
+  var planetList: PlanetList {
+    PlanetList(viewModel: PlanetListViewModel(planets: planets))
   }
 
   private var releaseDate: Date {
