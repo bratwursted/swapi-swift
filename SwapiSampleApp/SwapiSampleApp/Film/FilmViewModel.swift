@@ -60,7 +60,7 @@ final class FilmViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { people in
         self.characters = people.sorted(by: { (person1, person2) -> Bool in
-          person1.name < person2.name
+          person1.name.compare(person2.name, options: .caseInsensitive) == .orderedAscending
         })
       })
     .store(in: &disposables)
@@ -70,7 +70,7 @@ final class FilmViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink { planets in
         self.planets = planets.sorted(by: { (planet1, planet2) -> Bool in
-          planet1.name < planet2.name
+          planet1.name.compare(planet2.name, options: .caseInsensitive) == .orderedAscending
         })
     }
     .store(in: &disposables)
@@ -80,7 +80,7 @@ final class FilmViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink { species in
         self.species = species.sorted(by: { (species1, species2) -> Bool in
-          species1.name < species2.name
+          species1.name.compare(species2.name, options: .caseInsensitive) == .orderedAscending
         })
     }
     .store(in: &disposables)
@@ -89,7 +89,9 @@ final class FilmViewModel: ObservableObject {
     .$starships
       .receive(on: DispatchQueue.main)
       .sink { starships in
-        self.starships = starships
+        self.starships = starships.sorted(by: { (starship1, starship2) -> Bool in
+          starship1.name.compare(starship2.name, options: .caseInsensitive) == .orderedAscending
+        })
     }
     .store(in: &disposables)
 
@@ -97,7 +99,9 @@ final class FilmViewModel: ObservableObject {
     .$vehicles
       .receive(on: DispatchQueue.main)
       .sink { vehicles in
-        self.vehicles = vehicles
+        self.vehicles = vehicles.sorted(by: { (vehicle1, vehicle2) -> Bool in
+          vehicle1.name.compare(vehicle2.name, options: .caseInsensitive) == .orderedAscending
+        })
     }
     .store(in: &disposables)
   }
@@ -168,6 +172,10 @@ final class FilmViewModel: ObservableObject {
 
   var speciesList: SpeciesList {
     SpeciesList(viewModel: SpeciesListViewModel(species: species))
+  }
+
+  var starshipList: StarshipList {
+    StarshipList(viewModel: StarshipListViewModel(starships: starships))
   }
 
   private var releaseDate: Date {

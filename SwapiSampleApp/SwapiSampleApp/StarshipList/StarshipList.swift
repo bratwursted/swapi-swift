@@ -7,15 +7,26 @@
 //
 
 import SwiftUI
+import SwapiSwift
 
 struct StarshipList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  let viewModel: StarshipListViewModel
+
+  var body: some View {
+    List {
+      ForEach(viewModel.starships, id: \.self) {
+        self.viewModel.rowView(for: $0)
+      }
     }
+    .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
+  }
 }
 
 struct StarshipList_Previews: PreviewProvider {
-    static var previews: some View {
-        StarshipList()
-    }
+  static var previews: some View {
+    StarshipList(viewModel: StarshipListViewModel(
+      starships: newHopeData[.starships] as! [Starship]
+    ))
+  }
 }
