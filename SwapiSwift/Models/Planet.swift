@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a planet in the Star Wars unioverse.
-public struct Planet: SwapiResource {
+public struct Planet: SwapiResource, Hashable {
 
   /// The terrain of this planet. Comma-seperated if diverse.
   public let terrain: String

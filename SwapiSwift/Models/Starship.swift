@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a starship featured in the Star Wars universe.
-public struct Starship: SwapiResource {
+public struct Starship: SwapiResource, Hashable {
 
   /// An array of Film URL Resources that this starship has appeared in.
   public let films: [String]

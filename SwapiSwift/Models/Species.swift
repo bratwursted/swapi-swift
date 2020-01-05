@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a species featured in the Star Wars universe.
-public struct Species: SwapiResource {
+public struct Species: SwapiResource, Hashable {
 
   ///  An array of `Film` URL resources that this species has appeared in.
   public let films: [String]

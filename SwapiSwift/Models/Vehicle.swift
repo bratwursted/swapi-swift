@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents metadata associated with a vehicle in the Star Wars universe.
-public struct Vehicle: SwapiResource {
+public struct Vehicle: SwapiResource, Hashable {
 
   /// An array of Film URL Resources that this vehicle has appeared in.
   public let films: [String]
