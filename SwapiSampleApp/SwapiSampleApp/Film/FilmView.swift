@@ -113,9 +113,24 @@ extension FilmView {
   }
 
   var planetsSection: some View {
-    Section(header: Text(NavigationDestination.planets.title)) {
+    Section(header: planetsHeader) {
       ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
         self.viewModel.planetRowView(forIndex: $0)
+      }
+    }
+  }
+
+  var planetsHeader: some View {
+    HStack {
+      Text(NavigationDestination.planets.title)
+      Spacer()
+      if viewModel.planets.count > FilmView.maxSectionItems {
+        NavigationLink(
+          destination: PlanetList(),
+          tag: NavigationDestination.planets.tag,
+          selection: $navigationTag) {
+            headerButton(forDestination: .planets)
+        }
       }
     }
   }
