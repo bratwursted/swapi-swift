@@ -31,6 +31,7 @@
 		8F32F52F23C2601100469244 /* luke_films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F52B23C2601100469244 /* luke_films.json */; };
 		8F32F53023C2601100469244 /* luke_species.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F52C23C2601100469244 /* luke_species.json */; };
 		8F32F53123C2601100469244 /* luke_vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F52D23C2601100469244 /* luke_vehicles.json */; };
+		8F32F53323C3698100469244 /* FilmRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F53223C3698100469244 /* FilmRowView.swift */; };
 		8F535D8F23BF759C00E72BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */; };
 		8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */; };
 		8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9223BF759C00E72BF9 /* ContentView.swift */; };
@@ -110,6 +111,7 @@
 		8F32F52B23C2601100469244 /* luke_films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = luke_films.json; sourceTree = "<group>"; };
 		8F32F52C23C2601100469244 /* luke_species.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = luke_species.json; sourceTree = "<group>"; };
 		8F32F52D23C2601100469244 /* luke_vehicles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = luke_vehicles.json; sourceTree = "<group>"; };
+		8F32F53223C3698100469244 /* FilmRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRowView.swift; sourceTree = "<group>"; };
 		8F535D8B23BF759C00E72BF9 /* SwapiSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				8FAE12C623BFAE7600F0D03D /* FilmResultViewModel.swift */,
 				8F535DB523BF76B100E72BF9 /* FilmsListView.swift */,
 				8F535DBD23BF7FE500E72BF9 /* FilmsListViewModel.swift */,
+				8F32F53223C3698100469244 /* FilmRowView.swift */,
 			);
 			path = FilmList;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				8F535DB823BF77BC00E72BF9 /* SampleData.swift in Sources */,
 				8F67DF8D23C23BB200F126D5 /* StarshipList.swift in Sources */,
 				8F755FF123C254F3002CBEFD /* PersonViewModel.swift in Sources */,
+				8F32F53323C3698100469244 /* FilmRowView.swift in Sources */,
 				8F07F78D23C11F2800E9EF37 /* PlanetRowView.swift in Sources */,
 				8F535DBE23BF7FE500E72BF9 /* FilmsListViewModel.swift in Sources */,
 				8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */,

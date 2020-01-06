@@ -124,6 +124,26 @@ final class PersonViewModel: ObservableObject {
     "\(person.skinColor) skin"
   }
 
+  func speciesRowView(for species: Species) -> SpeciesRowView {
+    let vm = SpeciesRowViewModel(species: species)
+    return SpeciesRowView(viewModel: vm)
+  }
+
+  func filmRowView(for film: Film) -> FilmRowView {
+    let vm = FilmRowViewModel(film: film)
+    return FilmRowView(viewModel: vm)
+  }
+
+  func starshipRowView(for starship: Starship) -> StarshipRowView {
+    let vm = StarshipRowViewModel(starship: starship)
+    return StarshipRowView(viewModel: vm)
+  }
+
+  func vehicleRowView(for vehicle: Vehicle) -> VehicleRowView {
+    let vm = VehicleRowViewModel(vehicle: vehicle)
+    return VehicleRowView(viewModel: vm)
+  }
+
   private var heightMeters: String {
     let heightValue = Float(person.height) ?? 0
     return String(heightValue / 100)

@@ -11,13 +11,21 @@ import SwapiSwift
 
 struct PersonView: View {
 
+  static var noResultsRow: some View {
+    Text("No results")
+  }
+
   @ObservedObject var viewModel: PersonViewModel
 
   var body: some View {
     List {
       personalSection
-      homeSection
       vitalsSection
+      homeSection
+      speciesSection
+      filmsSection
+      starshipsSection
+      vehiclesSection
     }
     .navigationBarTitle(Text(viewModel.name), displayMode: .inline)
     .onAppear {
@@ -48,6 +56,18 @@ extension PersonView {
     }
   }
 
+  var speciesSection: some View {
+    Section(header: Text("Species")) {
+      if viewModel.species.isEmpty {
+        PersonView.noResultsRow
+      } else {
+        ForEach(viewModel.species, id: \.self) {
+          self.viewModel.speciesRowView(for: $0)
+        }
+      }
+    }
+  }
+
   var vitalsSection: some View {
     Section(header: Text("Vital stats")) {
       VStack(alignment: .leading, spacing: 12) {
@@ -56,6 +76,42 @@ extension PersonView {
         Text(viewModel.hair)
         Text(viewModel.eyes)
         Text(viewModel.skin)
+      }
+    }
+  }
+
+  var filmsSection: some View {
+    Section(header: Text("Appears in")) {
+      if viewModel.films.isEmpty {
+        PersonView.noResultsRow
+      } else {
+        ForEach(viewModel.films, id: \.self) {
+          self.viewModel.filmRowView(for: $0)
+        }
+      }
+    }
+  }
+
+  var starshipsSection: some View {
+    Section(header: Text("Starships")) {
+      if viewModel.starships.isEmpty {
+        PersonView.noResultsRow
+      } else {
+        ForEach(viewModel.starships, id: \.self) {
+          self.viewModel.starshipRowView(for: $0)
+        }
+      }
+    }
+  }
+
+  var vehiclesSection: some View {
+    Section(header: Text("Vehicles")) {
+      if viewModel.vehicles.isEmpty {
+        PersonView.noResultsRow
+      } else {
+        ForEach(viewModel.vehicles, id: \.self) {
+          self.viewModel.vehicleRowView(for: $0)
+        }
       }
     }
   }
