@@ -16,7 +16,9 @@ struct CharacterList: View {
   var body: some View {
     List {
       ForEach(viewModel.characters, id: \.self) { character in
-        self.viewModel.rowView(for: character)
+        NavigationLink(destination: self.viewModel.personView(for: character)) {
+          self.viewModel.rowView(for: character)
+        }
       }
     }
     .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)

@@ -135,6 +135,12 @@ final class FilmViewModel: ObservableObject {
     return FilmInfoView(viewModel: vm)
   }
 
+  func characterNavigationDestination(forCharacterAtIndex index: Int) -> PersonView {
+    let character = characters[index]
+    let service = PersonGraphService(person: character)
+    return PersonView(viewModel: PersonViewModel(graphService: service))
+  }
+
   func characterRowView(forIndex index: Int) -> PersonRowView {
     let character = characters[index]
     let vm = PersonRowViewModel(character: character)

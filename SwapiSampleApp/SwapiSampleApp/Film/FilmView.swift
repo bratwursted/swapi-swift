@@ -91,8 +91,10 @@ extension FilmView {
 
   var charactersSection: some View {
     Section(header: charactersHeader) {
-      ForEach(0..<maximumRowIndex(self.viewModel.characters)) {
-        self.viewModel.characterRowView(forIndex: $0)
+      ForEach(0..<maximumRowIndex(self.viewModel.characters)) { index in
+        NavigationLink(destination: self.viewModel.characterNavigationDestination(forCharacterAtIndex: index)) {
+          self.viewModel.characterRowView(forIndex: index)
+        }
       }
     }
   }

@@ -22,6 +22,11 @@ final class CharacterListViewModel {
     return PersonRowView(viewModel: vm)
   }
 
+  func personView(for person: Person) -> PersonView {
+    let vm = PersonViewModel(graphService: PersonGraphService(person: person))
+    return PersonView(viewModel: vm)
+  }
+
   var viewTitle: String {
     "Characters"
   }
