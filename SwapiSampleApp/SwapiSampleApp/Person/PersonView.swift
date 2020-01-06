@@ -11,6 +11,8 @@ import SwapiSwift
 
 struct PersonView: View {
 
+  // TODO: needs navigation to detail views
+
   static var noResultsRow: some View {
     Text("No results")
   }
