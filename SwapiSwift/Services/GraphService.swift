@@ -25,6 +25,13 @@ extension GraphService {
 
 }
 
+/// A free function for getting multiple `Film` resources from an array of resource URLs
+/// - Parameters:
+///   - dataService: A data service, conforming to `SwapiService`.
+///   - urls: The specified array of `String` URLs.
+///   - receiveCompletion: A closure to execute upon completion of the request.
+///   - receiveValue: A closure for execution upon receipt of the value, takes an array of `Film` as its argument.
+/// - Returns: A cancellable instance.
 func fetchFilms(
   from dataService: SwapiService,
   with urls: [String],
