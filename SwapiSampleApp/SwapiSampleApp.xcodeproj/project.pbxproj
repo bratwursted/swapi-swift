@@ -42,6 +42,11 @@
 		8F32F54823C43CF200469244 /* hutt_films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54623C43CF100469244 /* hutt_films.json */; };
 		8F32F54923C43CF200469244 /* hutt_people.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54723C43CF200469244 /* hutt_people.json */; };
 		8F32F54B23C43DF700469244 /* nal-hutta.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54A23C43DF700469244 /* nal-hutta.json */; };
+		8F32F54F23C4B77700469244 /* StarshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F54E23C4B77700469244 /* StarshipView.swift */; };
+		8F32F55123C4B78200469244 /* StarshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F55023C4B78200469244 /* StarshipViewModel.swift */; };
+		8F32F55523C4B97C00469244 /* falcon_pilots.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F55223C4B97C00469244 /* falcon_pilots.json */; };
+		8F32F55623C4B97C00469244 /* falcon_films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F55323C4B97C00469244 /* falcon_films.json */; };
+		8F32F55723C4B97C00469244 /* falcon.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F55423C4B97C00469244 /* falcon.json */; };
 		8F535D8F23BF759C00E72BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */; };
 		8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */; };
 		8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9223BF759C00E72BF9 /* ContentView.swift */; };
@@ -132,6 +137,11 @@
 		8F32F54623C43CF100469244 /* hutt_films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hutt_films.json; sourceTree = "<group>"; };
 		8F32F54723C43CF200469244 /* hutt_people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hutt_people.json; sourceTree = "<group>"; };
 		8F32F54A23C43DF700469244 /* nal-hutta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nal-hutta.json"; sourceTree = "<group>"; };
+		8F32F54E23C4B77700469244 /* StarshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipView.swift; sourceTree = "<group>"; };
+		8F32F55023C4B78200469244 /* StarshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipViewModel.swift; sourceTree = "<group>"; };
+		8F32F55223C4B97C00469244 /* falcon_pilots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = falcon_pilots.json; sourceTree = "<group>"; };
+		8F32F55323C4B97C00469244 /* falcon_films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = falcon_films.json; sourceTree = "<group>"; };
+		8F32F55423C4B97C00469244 /* falcon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = falcon.json; sourceTree = "<group>"; };
 		8F535D8B23BF759C00E72BF9 /* SwapiSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +232,15 @@
 			path = Species;
 			sourceTree = "<group>";
 		};
+		8F32F54D23C4B74D00469244 /* Starship */ = {
+			isa = PBXGroup;
+			children = (
+				8F32F54E23C4B77700469244 /* StarshipView.swift */,
+				8F32F55023C4B78200469244 /* StarshipViewModel.swift */,
+			);
+			path = Starship;
+			sourceTree = "<group>";
+		};
 		8F535D8223BF759C00E72BF9 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +282,7 @@
 				8F535DBB23BF7A0500E72BF9 /* Resources */,
 				8F32F53F23C433D800469244 /* Species */,
 				8FDAF3E623C2392900E928D2 /* SpeciesList */,
+				8F32F54D23C4B74D00469244 /* Starship */,
 				8F67DF9023C23BC500F126D5 /* StarshipList */,
 				8F0425BD23C23D1400229316 /* VehicleList */,
 			);
@@ -300,6 +320,9 @@
 			children = (
 				8F32F53A23C3F70000469244 /* alderaan_films.json */,
 				8F32F53B23C3F70000469244 /* alderaan_residents.json */,
+				8F32F55323C4B97C00469244 /* falcon_films.json */,
+				8F32F55223C4B97C00469244 /* falcon_pilots.json */,
+				8F32F55423C4B97C00469244 /* falcon.json */,
 				8F535DBC23BF7A0500E72BF9 /* films.json */,
 				8F32F54623C43CF100469244 /* hutt_films.json */,
 				8F32F54723C43CF200469244 /* hutt_people.json */,
@@ -468,10 +491,12 @@
 			files = (
 				8F32F53C23C3F70100469244 /* alderaan_films.json in Resources */,
 				8F07F77E23BFBC9400E9EF37 /* new_hope_planets.json in Resources */,
+				8F32F55523C4B97C00469244 /* falcon_pilots.json in Resources */,
 				8F535D9B23BF75AF00E72BF9 /* LaunchScreen.storyboard in Resources */,
 				8F32F53D23C3F70100469244 /* alderaan_residents.json in Resources */,
 				8F32F53023C2601100469244 /* luke_species.json in Resources */,
 				8F32F52F23C2601100469244 /* luke_films.json in Resources */,
+				8F32F55723C4B97C00469244 /* falcon.json in Resources */,
 				8F32F54823C43CF200469244 /* hutt_films.json in Resources */,
 				8F07F77B23BFBC9400E9EF37 /* new_hope_characters.json in Resources */,
 				8F535DBF23BF86C100E72BF9 /* films.json in Resources */,
@@ -479,6 +504,7 @@
 				8F535D9823BF75AF00E72BF9 /* Preview Assets.xcassets in Resources */,
 				8F32F52723C25CD200469244 /* planets.json in Resources */,
 				8F32F54B23C43DF700469244 /* nal-hutta.json in Resources */,
+				8F32F55623C4B97C00469244 /* falcon_films.json in Resources */,
 				8F535D9523BF75AF00E72BF9 /* Assets.xcassets in Resources */,
 				8F32F52523C25C3B00469244 /* people.json in Resources */,
 				8F07F77C23BFBC9400E9EF37 /* new_hope_vehicles.json in Resources */,
@@ -513,6 +539,7 @@
 				8FDAF3E323C2391600E928D2 /* SpeciesList.swift in Sources */,
 				8F67DF8F23C23BC000F126D5 /* StarshipListViewModel.swift in Sources */,
 				8FD1C89E23C23601001E13D2 /* NavigationDestination.swift in Sources */,
+				8F32F54F23C4B77700469244 /* StarshipView.swift in Sources */,
 				8F07F78323BFE58800E9EF37 /* FilmInfoView.swift in Sources */,
 				8F0425BA23C23D0300229316 /* VehicleList.swift in Sources */,
 				8FAE12CA23BFB02E00F0D03D /* FilmView.swift in Sources */,
@@ -535,6 +562,7 @@
 				8F0425BC23C23D0E00229316 /* VehicleListViewModel.swift in Sources */,
 				8F07F78923C10F5000E9EF37 /* Film+Strings.swift in Sources */,
 				8F32F54323C4340B00469244 /* SpeciesVIewModel.swift in Sources */,
+				8F32F55123C4B78200469244 /* StarshipViewModel.swift in Sources */,
 				8F07F79923C15B1000E9EF37 /* CharacterList.swift in Sources */,
 				8F07F78B23C11B0700E9EF37 /* PersonRowView.swift in Sources */,
 				8F07F78523BFE59600E9EF37 /* FilmInfoViewModel.swift in Sources */,

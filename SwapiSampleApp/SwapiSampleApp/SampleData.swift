@@ -29,6 +29,10 @@ func samplePlanet(_ name: String) -> Planet {
   load(name)
 }
 
+func sampleStarship(_ name: String) -> Starship {
+  load(name)
+}
+
 var huttData: MockGraphDataService.DataStore {
   let films: [Film] = load("hutt_films")
   let people: [Person] = load("hutt_people")
