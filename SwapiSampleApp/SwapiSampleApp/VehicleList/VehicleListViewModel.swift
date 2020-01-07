@@ -21,6 +21,12 @@ final class VehicleListViewModel {
     VehicleRowView(viewModel: VehicleRowViewModel(vehicle: vehicle))
   }
 
+  func destinationView(forVehicle vehicle: Vehicle) -> VehicleView {
+    let graphService = VehicleGraphService(vehicle: vehicle)
+    let vm = VehicleViewModel(graphService: graphService)
+    return VehicleView(viewModel: vm)
+  }
+
   var viewTitle: String {
     "Vehicles"
   }

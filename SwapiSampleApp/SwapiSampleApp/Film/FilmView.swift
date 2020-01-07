@@ -195,8 +195,12 @@ extension FilmView {
 
   var vehiclesSection: some View {
     Section(header: vehiclesSectionHeader) {
-      ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) {
-        self.viewModel.vehicleRowView(forIndex: $0)
+      ForEach(0..<maximumRowIndex(self.viewModel.vehicles)) { index in
+        NavigationLink(
+          destination: self.viewModel.vehicleDestination(forVehicleAtIndex: index)
+        ) {
+          self.viewModel.vehicleRowView(forIndex: index)
+        }
       }
     }
   }

@@ -15,8 +15,12 @@ struct VehicleList: View {
 
   var body: some View {
     List {
-      ForEach(viewModel.vehicles, id: \.self) {
-        self.viewModel.rowView(for: $0)
+      ForEach(viewModel.vehicles, id: \.self) { vehicle in
+        NavigationLink(
+          destination: self.viewModel.destinationView(forVehicle: vehicle)
+        ) {
+          self.viewModel.rowView(for: vehicle)
+        }
       }
     }
     .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)

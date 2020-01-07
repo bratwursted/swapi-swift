@@ -186,6 +186,12 @@ final class FilmViewModel: ObservableObject {
     return VehicleRowView(viewModel: vm)
   }
 
+  func vehicleDestination(forVehicleAtIndex index: Int) -> VehicleView {
+    let graphService = VehicleGraphService(vehicle: vehicles[index])
+    let vm = VehicleViewModel(graphService: graphService)
+    return VehicleView(viewModel: vm)
+  }
+
   var characterList: CharacterList {
     CharacterList(viewModel: CharacterListViewModel(characters: characters))
   }
