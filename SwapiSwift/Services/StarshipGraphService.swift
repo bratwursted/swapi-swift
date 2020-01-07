@@ -9,9 +9,9 @@
 import Foundation
 import Combine
 
-final class StarshipGraphService: GraphService {
+public final class StarshipGraphService: GraphService {
 
-  let starship: Starship
+  public let starship: Starship
 
   private let dataService: SwapiService
 
@@ -19,11 +19,11 @@ final class StarshipGraphService: GraphService {
 
   // Associated properties
 
-  @Published var films: [Film] = []
+  @Published public var films: [Film] = []
 
-  @Published var pilots: [Person] = []
+  @Published public var pilots: [Person] = []
 
-  init(
+  public init(
     starship: Starship,
     dataService: SwapiService = DataService()
   ) {
@@ -31,7 +31,7 @@ final class StarshipGraphService: GraphService {
     self.dataService = dataService
   }
 
-  func fetchAssociatedProperties() {
+  public func fetchAssociatedProperties() {
 
     // get films
 
