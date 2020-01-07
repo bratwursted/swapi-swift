@@ -168,8 +168,12 @@ extension FilmView {
 
   var starshipsSection: some View {
     Section(header: starshipsHeader) {
-      ForEach(0..<maximumRowIndex(self.viewModel.starships)) {
-        self.viewModel.starshipRowView(forIndex: $0)
+      ForEach(0..<maximumRowIndex(self.viewModel.starships)) { index in
+        NavigationLink(
+        destination: self.viewModel.starshipDestination(forStarshipAtIndex: index)
+        ) {
+          self.viewModel.starshipRowView(forIndex: index)
+        }
       }
     }
   }

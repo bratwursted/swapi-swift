@@ -15,8 +15,12 @@ struct StarshipList: View {
 
   var body: some View {
     List {
-      ForEach(viewModel.starships, id: \.self) {
-        self.viewModel.rowView(for: $0)
+      ForEach(viewModel.starships, id: \.self) { starship in
+        NavigationLink(
+        destination: self.viewModel.linkDestination(for: starship)
+        ) {
+          self.viewModel.rowView(for: starship)
+        }
       }
     }
     .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)

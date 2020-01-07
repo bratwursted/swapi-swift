@@ -21,6 +21,12 @@ final class StarshipListViewModel {
     StarshipRowView(viewModel: StarshipRowViewModel(starship: starship))
   }
 
+  func linkDestination(for starship: Starship) -> StarshipView {
+    let graphService = StarshipGraphService(starship: starship)
+    let vm = StarshipViewModel(graphService: graphService)
+    return StarshipView(viewModel: vm)
+  }
+
   var viewTitle: String {
     "Starships"
   }
