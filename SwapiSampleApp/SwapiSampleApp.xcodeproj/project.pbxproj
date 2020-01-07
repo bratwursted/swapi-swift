@@ -38,6 +38,10 @@
 		8F32F53D23C3F70100469244 /* alderaan_residents.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F53B23C3F70000469244 /* alderaan_residents.json */; };
 		8F32F54123C433FA00469244 /* SpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F54023C433FA00469244 /* SpeciesView.swift */; };
 		8F32F54323C4340B00469244 /* SpeciesVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F54223C4340B00469244 /* SpeciesVIewModel.swift */; };
+		8F32F54523C43C7600469244 /* hutt.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54423C43C7600469244 /* hutt.json */; };
+		8F32F54823C43CF200469244 /* hutt_films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54623C43CF100469244 /* hutt_films.json */; };
+		8F32F54923C43CF200469244 /* hutt_people.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54723C43CF200469244 /* hutt_people.json */; };
+		8F32F54B23C43DF700469244 /* nal-hutta.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F54A23C43DF700469244 /* nal-hutta.json */; };
 		8F535D8F23BF759C00E72BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */; };
 		8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */; };
 		8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9223BF759C00E72BF9 /* ContentView.swift */; };
@@ -124,6 +128,10 @@
 		8F32F53B23C3F70000469244 /* alderaan_residents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = alderaan_residents.json; sourceTree = "<group>"; };
 		8F32F54023C433FA00469244 /* SpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesView.swift; sourceTree = "<group>"; };
 		8F32F54223C4340B00469244 /* SpeciesVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesVIewModel.swift; sourceTree = "<group>"; };
+		8F32F54423C43C7600469244 /* hutt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hutt.json; path = ../../../../../Downloads/hutt.json; sourceTree = "<group>"; };
+		8F32F54623C43CF100469244 /* hutt_films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hutt_films.json; sourceTree = "<group>"; };
+		8F32F54723C43CF200469244 /* hutt_people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hutt_people.json; sourceTree = "<group>"; };
+		8F32F54A23C43DF700469244 /* nal-hutta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nal-hutta.json"; sourceTree = "<group>"; };
 		8F535D8B23BF759C00E72BF9 /* SwapiSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,10 +301,14 @@
 				8F32F53A23C3F70000469244 /* alderaan_films.json */,
 				8F32F53B23C3F70000469244 /* alderaan_residents.json */,
 				8F535DBC23BF7A0500E72BF9 /* films.json */,
+				8F32F54623C43CF100469244 /* hutt_films.json */,
+				8F32F54723C43CF200469244 /* hutt_people.json */,
+				8F32F54423C43C7600469244 /* hutt.json */,
 				8F32F52B23C2601100469244 /* luke_films.json */,
 				8F32F52C23C2601100469244 /* luke_species.json */,
 				8F32F52A23C2601100469244 /* luke_starships.json */,
 				8F32F52D23C2601100469244 /* luke_vehicles.json */,
+				8F32F54A23C43DF700469244 /* nal-hutta.json */,
 				8F07F77623BFBC9300E9EF37 /* new_hope_characters.json */,
 				8F07F77923BFBC9400E9EF37 /* new_hope_planets.json */,
 				8F07F77A23BFBC9400E9EF37 /* new_hope_species.json */,
@@ -460,16 +472,20 @@
 				8F32F53D23C3F70100469244 /* alderaan_residents.json in Resources */,
 				8F32F53023C2601100469244 /* luke_species.json in Resources */,
 				8F32F52F23C2601100469244 /* luke_films.json in Resources */,
+				8F32F54823C43CF200469244 /* hutt_films.json in Resources */,
 				8F07F77B23BFBC9400E9EF37 /* new_hope_characters.json in Resources */,
 				8F535DBF23BF86C100E72BF9 /* films.json in Resources */,
 				8F32F52923C25DD900469244 /* Tatooine.json in Resources */,
 				8F535D9823BF75AF00E72BF9 /* Preview Assets.xcassets in Resources */,
 				8F32F52723C25CD200469244 /* planets.json in Resources */,
+				8F32F54B23C43DF700469244 /* nal-hutta.json in Resources */,
 				8F535D9523BF75AF00E72BF9 /* Assets.xcassets in Resources */,
 				8F32F52523C25C3B00469244 /* people.json in Resources */,
 				8F07F77C23BFBC9400E9EF37 /* new_hope_vehicles.json in Resources */,
 				8F32F52E23C2601100469244 /* luke_starships.json in Resources */,
+				8F32F54923C43CF200469244 /* hutt_people.json in Resources */,
 				8F32F53123C2601100469244 /* luke_vehicles.json in Resources */,
+				8F32F54523C43C7600469244 /* hutt.json in Resources */,
 				8F07F77F23BFBC9400E9EF37 /* new_hope_species.json in Resources */,
 				8F07F77D23BFBC9400E9EF37 /* new_hope_starships.json in Resources */,
 			);
