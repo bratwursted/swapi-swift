@@ -32,6 +32,7 @@
 		8F535D7F23BF70DC00E72BF9 /* StarshipGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D7E23BF70DC00E72BF9 /* StarshipGraphService.swift */; };
 		8F535D8123BF724700E72BF9 /* VehicleGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8023BF724700E72BF9 /* VehicleGraphService.swift */; };
 		8F6EA6AE23C53ABA0079491D /* MockGraphDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EA6AD23C53ABA0079491D /* MockGraphDataService.swift */; };
+		8F6EA6B023C53C750079491D /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EA6AF23C53C750079491D /* MockDataService.swift */; };
 		8FBF743923BE6D07008FF80D /* FilmGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF743823BE6D07008FF80D /* FilmGraphService.swift */; };
 		8FBF743B23BE6D66008FF80D /* GraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF743A23BE6D66008FF80D /* GraphService.swift */; };
 		8FE79E4723BBF4CC00897C77 /* VehicleModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */; };
@@ -89,6 +90,7 @@
 		8F535D7E23BF70DC00E72BF9 /* StarshipGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipGraphService.swift; sourceTree = "<group>"; };
 		8F535D8023BF724700E72BF9 /* VehicleGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleGraphService.swift; sourceTree = "<group>"; };
 		8F6EA6AD23C53ABA0079491D /* MockGraphDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGraphDataService.swift; sourceTree = "<group>"; };
+		8F6EA6AF23C53C750079491D /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		8FBF743823BE6D07008FF80D /* FilmGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmGraphService.swift; sourceTree = "<group>"; };
 		8FBF743A23BE6D66008FF80D /* GraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphService.swift; sourceTree = "<group>"; };
 		8FE79E4623BBF4CC00897C77 /* VehicleModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModelTests.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE79E5A23BD02C900897C77 /* SwapiService.swift */,
+				8F6EA6AF23C53C750079491D /* MockDataService.swift */,
 				8F6EA6AD23C53ABA0079491D /* MockGraphDataService.swift */,
 				8FBF743823BE6D07008FF80D /* FilmGraphService.swift */,
 				8F535D7823BF65F300E72BF9 /* PersonGraphService.swift */,
@@ -382,6 +385,7 @@
 				8FBF743923BE6D07008FF80D /* FilmGraphService.swift in Sources */,
 				8F6EA6AE23C53ABA0079491D /* MockGraphDataService.swift in Sources */,
 				8FE79E6623BD25E800897C77 /* Parsing.swift in Sources */,
+				8F6EA6B023C53C750079491D /* MockDataService.swift in Sources */,
 				8F34E27523BB85ED00608F46 /* Vehicle.swift in Sources */,
 				8FE79E5B23BD02C900897C77 /* SwapiService.swift in Sources */,
 				8F34E26F23BB81D500608F46 /* Species.swift in Sources */,

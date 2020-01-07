@@ -10,6 +10,7 @@ import Foundation
 import Combine
 
 /// A mock data service confomring to `SwapiService` for use in testing and SwiftUI development.
+/// This mock data service is designed for use with `GraphService` helper classes
 public struct MockGraphDataService: SwapiService {
 
   /// A key-value store containing arrays of resources conforming to `SwapiResource`.
