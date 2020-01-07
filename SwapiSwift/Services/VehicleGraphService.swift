@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requests for resources associated with a `Vehicle`.
 public final class VehicleGraphService: GraphService {
 
   public let vehicle: Vehicle
@@ -23,6 +24,10 @@ public final class VehicleGraphService: GraphService {
 
   @Published public var pilots: [Person] = []
 
+  /// Instantiates a new instance of `VehicleGraphService`
+  /// - Parameters:
+  ///   - vehicle: The specified `Vehicle`
+  ///   - dataService: A data service confirming to `SwapiService`. Defaults to `DataService` if not specified.
   public init(
     vehicle: Vehicle,
     dataService: SwapiService = DataService()

@@ -11,6 +11,7 @@ import Combine
 
 protocol GraphService {
 
+  /// Call this function to update the associated properties handled by the `GraphService`. 
   func fetchAssociatedProperties()
 
   func handleError(_ error: ServiceError)
