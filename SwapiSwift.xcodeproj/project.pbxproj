@@ -616,6 +616,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinx.SwapiSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -635,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinx.SwapiSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
