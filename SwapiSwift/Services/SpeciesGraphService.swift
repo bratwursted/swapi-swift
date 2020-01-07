@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-final class SpeciesGraphService: GraphService {
+public final class SpeciesGraphService: GraphService {
 
   let species: Species
 
@@ -19,13 +19,13 @@ final class SpeciesGraphService: GraphService {
 
   // Associated properties
 
-  @Published var films: [Film] = []
+  @Published public var films: [Film] = []
 
-  @Published var people: [Person] = []
+  @Published public var people: [Person] = []
 
-  @Published var homeworld: Planet?
+  @Published public var homeworld: Planet?
 
-  init(
+  public init(
     species: Species,
     dataService: SwapiService = DataService()
   ) {
@@ -33,7 +33,7 @@ final class SpeciesGraphService: GraphService {
     self.dataService = dataService
   }
 
-  func fetchAssociatedProperties() {
+  public func fetchAssociatedProperties() {
 
     // get homeworld
 
