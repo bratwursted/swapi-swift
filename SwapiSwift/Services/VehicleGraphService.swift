@@ -9,9 +9,9 @@
 import Foundation
 import Combine
 
-final class VehicleGraphService: GraphService {
+public final class VehicleGraphService: GraphService {
 
-  let vehicle: Vehicle
+  public let vehicle: Vehicle
 
   private let dataService: SwapiService
 
@@ -19,11 +19,11 @@ final class VehicleGraphService: GraphService {
 
   // Associated properties
 
-  @Published var films: [Film] = []
+  @Published public var films: [Film] = []
 
-  @Published var pilots: [Person] = []
+  @Published public var pilots: [Person] = []
 
-  init(
+  public init(
     vehicle: Vehicle,
     dataService: SwapiService = DataService()
   ) {
@@ -31,7 +31,7 @@ final class VehicleGraphService: GraphService {
     self.dataService = dataService
   }
 
-  func fetchAssociatedProperties() {
+  public func fetchAssociatedProperties() {
 
     // get films
 
