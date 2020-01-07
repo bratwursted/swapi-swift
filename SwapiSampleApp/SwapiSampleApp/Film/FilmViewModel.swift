@@ -211,7 +211,7 @@ final class FilmViewModel: ObservableObject {
   }
 
   private var episode: String {
-    String(film.episodeId)
+    film.episodeId.romanNumeral
   }
 }
 

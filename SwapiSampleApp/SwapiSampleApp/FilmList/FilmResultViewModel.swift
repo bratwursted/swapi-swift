@@ -37,7 +37,7 @@ final class FilmResultViewModel: Identifiable {
   }
 
   var episodeNumber: String {
-    String(film.episodeId)
+    film.episodeId.romanNumeral
   }
 
   var releaseYear: String {

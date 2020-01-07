@@ -18,7 +18,7 @@ final class FilmInfoViewModel {
   }
 
   var filmTitle: String {
-    "Episode \(film.episodeId)"
+    "Episode \(film.episodeId.romanNumeral)"
   }
 
   var episodeTitle: String {
