@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requests for resources associated with a `Film`.
 public final class FilmGraphService: GraphService, ObservableObject {
 
   public let film: Film
@@ -29,6 +30,10 @@ public final class FilmGraphService: GraphService, ObservableObject {
 
   @Published public var vehicles: [Vehicle] = []
 
+  /// Initializes a new `FilmGraphService`
+  /// - Parameters:
+  ///   - film: The specified `Film`
+  ///   - dataService: A data service conforming to `SwapiService`. Defaults to `DataService` if not specified. 
   public init(
     film: Film,
     dataService: SwapiService = DataService()) {

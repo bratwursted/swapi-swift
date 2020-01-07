@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requests for resources associated with a `Starship`.
 public final class StarshipGraphService: GraphService {
 
   public let starship: Starship
@@ -23,6 +24,10 @@ public final class StarshipGraphService: GraphService {
 
   @Published public var pilots: [Person] = []
 
+  /// Instantiates a new instance of `StarshipGraphService`
+  /// - Parameters:
+  ///   - starship: The specified `Starship`
+  ///   - dataService: A data service conforming to `SwapiService`. Defaults to `DataService` if not specified. 
   public init(
     starship: Starship,
     dataService: SwapiService = DataService()

@@ -11,6 +11,7 @@ import Combine
 
 protocol GraphService {
 
+  /// Call this function to update the associated properties handled by the `GraphService`. 
   func fetchAssociatedProperties()
 
   func handleError(_ error: ServiceError)
@@ -25,6 +26,13 @@ extension GraphService {
 
 }
 
+/// A free function for getting multiple `Film` resources from an array of resource URLs
+/// - Parameters:
+///   - dataService: A data service, conforming to `SwapiService`.
+///   - urls: The specified array of `String` URLs.
+///   - receiveCompletion: A closure to execute upon completion of the request.
+///   - receiveValue: A closure for execution upon receipt of the value, takes an array of `Film` as its argument.
+/// - Returns: A cancellable instance.
 func fetchFilms(
   from dataService: SwapiService,
   with urls: [String],

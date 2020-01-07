@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requests for resources associated with a `Planet`
 public final class PlanetGraphService: GraphService {
 
   public let planet: Planet
@@ -23,6 +24,10 @@ public final class PlanetGraphService: GraphService {
 
   @Published public var films: [Film] = []
 
+  /// Instantiates a new instance of `PlanetGraphService`
+  /// - Parameters:
+  ///   - planet: The specified `Planet`
+  ///   - dataService: A data service conforming to `SwapiService`. Defaults to `DataService` if not specified. 
   public init(
     planet: Planet,
     dataService: SwapiService = DataService()

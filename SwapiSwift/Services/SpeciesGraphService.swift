@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requests for resources associated with a `Species`.
 public final class SpeciesGraphService: GraphService {
 
   public let species: Species
@@ -25,6 +26,10 @@ public final class SpeciesGraphService: GraphService {
 
   @Published public var homeworld: Planet?
 
+  /// Instantiates a new instance of `SpeciesGraphService`
+  /// - Parameters:
+  ///   - species: The specified `Species`
+  ///   - dataService: A data service conforming to `SwapiService`. Defaults to `DataService` if not specified. 
   public init(
     species: Species,
     dataService: SwapiService = DataService()

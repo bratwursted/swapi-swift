@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+/// A helper class responsible for handling requetss for resources associated with a `Person`.
 public final class PersonGraphService: GraphService, ObservableObject {
 
   public let person: Person
@@ -29,6 +30,10 @@ public final class PersonGraphService: GraphService, ObservableObject {
 
   private var disposables = Set<AnyCancellable>()
 
+  /// Initializes a new instance of `PersonGraphService`.
+  /// - Parameters:
+  ///   - person: The specified `Person`
+  ///   - dataService: A data service conforming to `SwapiService`. Defaults to `DataService` if not specified. 
   public init(
     person: Person,
     dataService: SwapiService = DataService()
