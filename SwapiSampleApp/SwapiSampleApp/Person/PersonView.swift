@@ -120,7 +120,19 @@ extension PersonView {
 }
 
 struct PersonView_Previews: PreviewProvider {
-  static let vm = PersonViewModel(graphService: PersonGraphService(person: samplePeople.results[0], dataService: MockGraphDataService(dataStore: lukeData, homeworld: samplePlanet("Tatooine"))))
+  static let vm: PersonViewModel = {
+    let dataStore = lukeData
+    let homeworld = samplePlanet("Tatooine")
+    let dataService = MockGraphDataService(
+      dataStore: dataStore,
+      homeworld: homeworld
+    )
+    let graphService = PersonGraphService(
+      person: samplePeople.results[0],
+      dataService: dataService
+    )
+    return PersonViewModel(graphService: graphService)
+  }()
 
   static var previews: some View {
     NavigationView {

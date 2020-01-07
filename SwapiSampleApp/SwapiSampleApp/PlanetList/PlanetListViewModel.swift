@@ -22,6 +22,12 @@ final class PlanetListViewModel {
     return PlanetRowView(viewModel: vm)
   }
 
+  func destination(for planet: Planet) -> PlanetView {
+    let graphService = PlanetGraphService(planet: planet)
+    let vm = PlanetViewModel(graphService: graphService)
+    return PlanetView(viewModel: vm)
+  }
+
   var viewTitle: String {
     "Planets"
   }
