@@ -50,6 +50,9 @@
 		8F32F55923C4D06B00469244 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F55823C4D06B00469244 /* StringTests.swift */; };
 		8F32F55C23C4D49200469244 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F55B23C4D49200469244 /* VehicleView.swift */; };
 		8F32F55E23C4D49D00469244 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32F55D23C4D49D00469244 /* VehicleViewModel.swift */; };
+		8F32F56223C4D73600469244 /* snowspeeder_pilots.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F55F23C4D73600469244 /* snowspeeder_pilots.json */; };
+		8F32F56323C4D73600469244 /* snowspeeder.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F56023C4D73600469244 /* snowspeeder.json */; };
+		8F32F56423C4D73600469244 /* snowspeed_films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F32F56123C4D73600469244 /* snowspeed_films.json */; };
 		8F535D8F23BF759C00E72BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */; };
 		8F535D9123BF759C00E72BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */; };
 		8F535D9323BF759C00E72BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D9223BF759C00E72BF9 /* ContentView.swift */; };
@@ -148,6 +151,9 @@
 		8F32F55823C4D06B00469244 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		8F32F55B23C4D49200469244 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		8F32F55D23C4D49D00469244 /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		8F32F55F23C4D73600469244 /* snowspeeder_pilots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowspeeder_pilots.json; sourceTree = "<group>"; };
+		8F32F56023C4D73600469244 /* snowspeeder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowspeeder.json; sourceTree = "<group>"; };
+		8F32F56123C4D73600469244 /* snowspeed_films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowspeed_films.json; sourceTree = "<group>"; };
 		8F535D8B23BF759C00E72BF9 /* SwapiSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F535D8E23BF759C00E72BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F535D9023BF759C00E72BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -356,6 +362,9 @@
 				8F07F77723BFBC9300E9EF37 /* new_hope_vehicles.json */,
 				8F32F52423C25C3B00469244 /* people.json */,
 				8F32F52623C25CD200469244 /* planets.json */,
+				8F32F56123C4D73600469244 /* snowspeed_films.json */,
+				8F32F55F23C4D73600469244 /* snowspeeder_pilots.json */,
+				8F32F56023C4D73600469244 /* snowspeeder.json */,
 				8F32F52823C25DD900469244 /* Tatooine.json */,
 			);
 			path = Resources;
@@ -510,6 +519,7 @@
 				8F07F77E23BFBC9400E9EF37 /* new_hope_planets.json in Resources */,
 				8F32F55523C4B97C00469244 /* falcon_pilots.json in Resources */,
 				8F535D9B23BF75AF00E72BF9 /* LaunchScreen.storyboard in Resources */,
+				8F32F56223C4D73600469244 /* snowspeeder_pilots.json in Resources */,
 				8F32F53D23C3F70100469244 /* alderaan_residents.json in Resources */,
 				8F32F53023C2601100469244 /* luke_species.json in Resources */,
 				8F32F52F23C2601100469244 /* luke_films.json in Resources */,
@@ -520,12 +530,14 @@
 				8F32F52923C25DD900469244 /* Tatooine.json in Resources */,
 				8F535D9823BF75AF00E72BF9 /* Preview Assets.xcassets in Resources */,
 				8F32F52723C25CD200469244 /* planets.json in Resources */,
+				8F32F56323C4D73600469244 /* snowspeeder.json in Resources */,
 				8F32F54B23C43DF700469244 /* nal-hutta.json in Resources */,
 				8F32F55623C4B97C00469244 /* falcon_films.json in Resources */,
 				8F535D9523BF75AF00E72BF9 /* Assets.xcassets in Resources */,
 				8F32F52523C25C3B00469244 /* people.json in Resources */,
 				8F07F77C23BFBC9400E9EF37 /* new_hope_vehicles.json in Resources */,
 				8F32F52E23C2601100469244 /* luke_starships.json in Resources */,
+				8F32F56423C4D73600469244 /* snowspeed_films.json in Resources */,
 				8F32F54923C43CF200469244 /* hutt_people.json in Resources */,
 				8F32F53123C2601100469244 /* luke_vehicles.json in Resources */,
 				8F32F54523C43C7600469244 /* hutt.json in Resources */,

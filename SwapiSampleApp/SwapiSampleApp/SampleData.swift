@@ -33,6 +33,19 @@ func sampleStarship(_ name: String) -> Starship {
   load(name)
 }
 
+func sampleVehicle(_ name: String) -> Vehicle {
+  load(name)
+}
+
+var snowspeederData: MockGraphDataService.DataStore {
+  let films: [Film] = load("snowspeeder_films")
+  let pilots: [Person] = load("snowspeeder_pilots")
+  return [
+    .films: films,
+    .people: pilots
+  ]
+}
+
 var falconData: MockGraphDataService.DataStore {
   let films: [Film] = load("falcon_films")
   let pilots: [Person] = load("falcon_pilots")
