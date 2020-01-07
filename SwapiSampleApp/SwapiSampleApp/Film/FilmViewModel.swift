@@ -164,6 +164,12 @@ final class FilmViewModel: ObservableObject {
     return SpeciesRowView(viewModel: vm)
   }
 
+  func navigationDestination(forSpeciesAtIndex index: Int) -> SpeciesView {
+    let graphService = SpeciesGraphService(species: species[index])
+    let vm = SpeciesViewModel(graphService: graphService)
+    return SpeciesView(viewModel: vm)
+  }
+
   func starshipRowView(forIndex index: Int) -> StarshipRowView {
     let vm = StarshipRowViewModel(starship: starships[index])
     return StarshipRowView(viewModel: vm)

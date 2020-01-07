@@ -141,8 +141,12 @@ extension FilmView {
 
   var speciesSection: some View {
     Section(header: speciesHeader) {
-      ForEach(0..<maximumRowIndex(self.viewModel.species)) {
-        self.viewModel.speciesRowView(forIndex: $0)
+      ForEach(0..<maximumRowIndex(self.viewModel.species)) { index in
+        NavigationLink(
+        destination: self.viewModel.navigationDestination(forSpeciesAtIndex: index
+        )) {
+          self.viewModel.speciesRowView(forIndex: index)
+        }
       }
     }
   }
