@@ -11,7 +11,7 @@ import Combine
 
 public final class SpeciesGraphService: GraphService {
 
-  let species: Species
+  public let species: Species
 
   private let dataService: SwapiService
 
