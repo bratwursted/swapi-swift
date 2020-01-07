@@ -16,7 +16,9 @@ struct PlanetList: View {
   var body: some View {
     List {
       ForEach(viewModel.planets, id: \.self) { planet in
-        self.viewModel.rowView(for: planet)
+        NavigationLink(destination: self.viewModel.destination(for: planet)) {
+          self.viewModel.rowView(for: planet)
+        }
       }
     }
     .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
