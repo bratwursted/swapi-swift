@@ -38,6 +38,15 @@ var lukeData: MockGraphDataService.DataStore {
   ]
 }
 
+var alderaanData: MockGraphDataService.DataStore {
+  let films: [Film] = load("alderaan_films")
+  let residents: [Person] = load("alderaan_residents")
+  return [
+    .films: films,
+    .people: residents
+  ]
+}
+
 var newHopeData: MockGraphDataService.DataStore {
   return [
     .people: newHopeCharacters,
