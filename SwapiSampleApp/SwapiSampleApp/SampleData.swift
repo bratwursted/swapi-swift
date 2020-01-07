@@ -21,8 +21,21 @@ var samplePlanets: ResourceRoot<Planet> {
   load("planets")
 }
 
+func sampleSpecies(_ name: String) -> Species {
+  load(name)
+}
+
 func samplePlanet(_ name: String) -> Planet {
   load(name)
+}
+
+var huttData: MockGraphDataService.DataStore {
+  let films: [Film] = load("hutt_films")
+  let people: [Person] = load("hutt_people")
+  return [
+    .films: films,
+    .people: people
+  ]
 }
 
 var lukeData: MockGraphDataService.DataStore {
