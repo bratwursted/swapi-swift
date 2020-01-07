@@ -147,6 +147,12 @@ final class FilmViewModel: ObservableObject {
     return PersonRowView(viewModel: vm)
   }
 
+  func planetNavigationDestination(forPlanetAtIndex index: Int) -> PlanetView {
+    let planet = planets[index]
+    let service = PlanetGraphService(planet: planet)
+    return PlanetView(viewModel: PlanetViewModel(graphService: service))
+  }
+
   func planetRowView(forIndex index: Int) -> PlanetRowView {
     let planet = planets[index]
     let vm = PlanetRowViewModel(planet: planet)

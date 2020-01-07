@@ -116,8 +116,10 @@ extension FilmView {
 
   var planetsSection: some View {
     Section(header: planetsHeader) {
-      ForEach(0..<maximumRowIndex(self.viewModel.planets)) {
-        self.viewModel.planetRowView(forIndex: $0)
+      ForEach(0..<maximumRowIndex(self.viewModel.planets)) { index in
+        NavigationLink(destination: self.viewModel.planetNavigationDestination(forPlanetAtIndex: index)) {
+          self.viewModel.planetRowView(forIndex: index)
+        }
       }
     }
   }
@@ -227,10 +229,17 @@ extension FilmView {
 }
 
 struct FilmView_Previews: PreviewProvider {
-  static var previews: some View {
+
+  static let vm: FilmViewModel = {
     let film = sampleFilms.results[0]
     let dataService = MockGraphDataService(dataStore: newHopeData)
     let service = FilmGraphService(film: film, dataService: dataService)
-    return FilmView(viewModel: FilmViewModel(filmService: service))
+    return FilmViewModel(filmService: service)
+  }()
+
+  static var previews: some View {
+    NavigationView {
+      FilmView(viewModel: vm)
+    }
   }
 }
