@@ -24,4 +24,10 @@ final class SpeciesListViewModel {
   var viewTitle: String {
     "Species"
   }
+
+  func destinationView(for aSpecies: Species) -> SpeciesView {
+    let graphService = SpeciesGraphService(species: aSpecies)
+    let vm = SpeciesViewModel(graphService: graphService)
+    return SpeciesView(viewModel: vm)
+  }
 }

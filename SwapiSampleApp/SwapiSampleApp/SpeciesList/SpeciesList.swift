@@ -15,8 +15,10 @@ struct SpeciesList: View {
 
   var body: some View {
     List {
-      ForEach(viewModel.species, id: \.self) {
-        self.viewModel.rowView(for: $0)
+      ForEach(viewModel.species, id: \.self) { species in
+        NavigationLink(destination: self.viewModel.destinationView(for: species)) {
+          self.viewModel.rowView(for: species)
+        }
       }
     }
     .navigationBarTitle(Text(viewModel.viewTitle), displayMode: .inline)
@@ -24,9 +26,13 @@ struct SpeciesList: View {
 }
 
 struct SpeciesList_Previews: PreviewProvider {
+  static let vm: SpeciesListViewModel = {
+    SpeciesListViewModel(species: newHopeData[.species] as! [Species])
+  }()
+  
   static var previews: some View {
-    SpeciesList(viewModel: SpeciesListViewModel(
-      species: newHopeData[.species] as! [Species]
-    ))
+    NavigationView {
+      SpeciesList(viewModel: vm)
+    }
   }
 }
