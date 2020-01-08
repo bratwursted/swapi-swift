@@ -8,43 +8,43 @@
 
 import Foundation
 
-/// Represents metadata associated with a planet in the Star Wars unioverse.
+/// Represents metadata associated with a planet in the Star Wars universe.
 public struct Planet: SwapiResource, Hashable {
 
-  /// The terrain of this planet. Comma-seperated if diverse.
+  /// The terrain of this planet. Comma-seperated if diverse (e.g., "jungle, rainforests").
   public let terrain: String
 
-  /// The average populationof sentient beings inhabiting this planet.
+  /// The average population of sentient beings inhabiting this planet.
   public let population: String
 
   /// The diameter of this planet in kilometers.
   public let diameter: String
 
-  /// The hypermedia URL of this resource.
+  /// The resource URL of this resource.
   public let url: String
 
-  /// An array of `Person` URL Resources that live on this planet.
+  /// An array of `Person` resource URLs that live on this planet.
   public let residents: [String]
 
-  /// The climate of this planet. Comma-seperated if diverse.
+  /// The climate of this planet. Comma-seperated if diverse (e.g., "temperate, tropical").
   public let climate: String
 
   /// The number of standard days it takes for this planet to complete a single orbit of its local star.
   public let orbitalPeriod: String
 
-  /// The timestamp for when this resource was last edited.
+  /// The timestamp of the last edit for this resource.
   public let edited: Date
 
-  /// An array of `Film` URL resources that this planet has appeared in.
+  /// An array of `Film` resource URLs that this planet has appeared in.
   public let films: [String]
 
   /// The percentage of the planet surface that is naturally occuring water or bodies of water.
   public let surfaceWater: String
 
-  /// A number denoting the gravity of this planet. Where 1 is normal.
+  /// A number denoting the gravity of this planet, where 1 is normal.
   public let gravity: String
 
-  /// The timestamp for when this resource was created.
+  /// The timestamp when this resource was created.
   public let created: Date
 
   /// The number of standard hours it takes for this planet to complete a single rotation on its axis.

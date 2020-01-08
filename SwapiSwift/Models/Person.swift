@@ -14,7 +14,7 @@ public struct Person: SwapiResource, Hashable {
   /// The hair color of this person.
   public let hairColor: String
 
-  /// An array of `Film` URL resources featuring this person.
+  /// An array of `Film` resource URLs featuring this person.
   public let films: [String]
 
   /// The mass of this person in kilograms.
@@ -29,19 +29,19 @@ public struct Person: SwapiResource, Hashable {
   /// The timestamp of the last edit for this resource.
   public let edited: Date
 
-  /// An array `Starship` URL resources that this person has piloted.
+  /// An array `Starship` resource URLs that this person has piloted.
   public let starships: [String]
 
   /// The url of the planet resource that this person was born on.
   public let homeworld: String
 
-  /// The timestamp of when this resource was created.
+  /// The timestamp when this resource was created.
   public let created: Date
 
   /// The birth year of this person. BBY (Before the Battle of Yavin) or ABY (After the Battle of Yavin).
   public let birthYear: String
 
-  /// An array of `Vehicle` URL resources that this person has piloted
+  /// An array of `Vehicle` resource URLs that this person has piloted
   public let vehicles: [String]
 
   /// The url of the species resource that this person is.
