@@ -9,54 +9,95 @@
 import Foundation
 import Combine
 
+/// An enumeration of error states that can be returned from a `SwapiService`
 public enum ServiceError: Error {
   case unknown
   case networkError(error: NetworkError)
   case parsingError(error: Error)
 }
 
+/// Objects conforming to the `SwapiService` protocol may act as a data service for request resources from the Star Wars API (SWAPI)
 public protocol SwapiService {
 
+  /// Call this function to request a `Film` resource with a resource ID
+  /// - Parameter resourceId: The specified  ID `String` for the `Film` being requested.
   func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError>
 
+  /// Call this function to request a `Person` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the `Person` being requested.
   func person(withId resourceId: String) -> AnyPublisher<Person, ServiceError>
 
+  /// Call this function to request a `Planet` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError>
 
+  /// Call tis function to request a `Planet` resource with a resource URL.
+  /// - Parameter url: The specified URL `String` for the resource.
   func planet(withResourceUrl url: String?) -> AnyPublisher<Planet, ServiceError>
 
+  /// Call tis function to request a `Species` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError>
 
+  /// Call this function to request a `Starship` resource with a resource ID.
+  /// - Parameter resourceId: The specified  ID `String` for the resource.
   func starship(withId resourceId: String) -> AnyPublisher<Starship, ServiceError>
 
+  /// Call this function to request a `Vehicle` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func vehicle(withId resourceId: String) -> AnyPublisher<Vehicle, ServiceError>
 
+  /// Call this function to request a list of all the `Film` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allFilms(page: String?) -> AnyPublisher<ResourceRoot<Film>, ServiceError>
 
+  /// Call this function to request a list of all the `Person` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allPeople(page: String?) -> AnyPublisher<ResourceRoot<Person>, ServiceError>
 
+  /// Call this function to request a list of all the `Planet` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allPlanets(page: String?) -> AnyPublisher<ResourceRoot<Planet>, ServiceError>
 
+  /// Call this function to request a list of all the `Species` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allSpecies(page: String?) -> AnyPublisher<ResourceRoot<Species>, ServiceError>
 
+  /// Call this function to request a list of all the `Starship` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allStarships(page: String?) -> AnyPublisher<ResourceRoot<Starship>, ServiceError>
 
+  /// Call this function to request a list of all the `Vehicle` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allVehicles(page: String?) -> AnyPublisher<ResourceRoot<Vehicle>, ServiceError>
 
+  /// Call this function to perform multiple requests for `Film` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError>
+
+  /// Call this function to perform multiple requests for `Person` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func people(fromResourceUrls urls: [String]) -> AnyPublisher<[Person], ServiceError>
 
-  func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError>
-
+  /// Call this function to perform multiple requests for `Planet` resources from an using of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func planets(fromResourceUrls urls: [String]) -> AnyPublisher<[Planet], ServiceError>
 
+  /// Call this function to perform multiple requests for `Species` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func species(fromResourceUrls urls: [String]) -> AnyPublisher<[Species], ServiceError>
 
-  func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError>
+  /// Call this function to perform multiple requests for `Starship` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError>
 
-  func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError>
+  /// Call this function to perform multiple requests for `Vehicle` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError>
 
 }
 
+/// The default implementation of a data service conforming to the `SwapiService` protocol.
 public struct DataService: SwapiService {
 
   private let dataFetcher = DataFetcher()
@@ -186,270 +227,5 @@ public struct DataService: SwapiService {
       decode(data)
     }
     .eraseToAnyPublisher()
-  }
-}
-
-public struct MockDataService<T: SwapiResource>: SwapiService {
-
-  let mockData: T
-
-  public init(mockData: T) {
-    self.mockData = mockData
-  }
-
-  public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
-    guard let filmData = mockData as? Film else {
-      fatalError("Expected mock data to be initialized with type Film")
-    }
-    return Result.Publisher(filmData).eraseToAnyPublisher()
-  }
-
-  public func person(withId resourceId: String) -> AnyPublisher<Person, ServiceError> {
-    guard let personData = mockData as? Person else {
-      fatalError("Expected mock data to be initialized with type Person")
-    }
-    return Result.Publisher(personData).eraseToAnyPublisher()
-  }
-
-  public func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError> {
-    guard let planetData = mockData as? Planet else {
-      fatalError("Expected mock data to be initialized with type Planet")
-    }
-    return Result.Publisher(planetData).eraseToAnyPublisher()
-  }
-
-  public func planet(withResourceUrl url: String?) -> AnyPublisher<Planet, ServiceError> {
-    guard let planetData = mockData as? Planet else {
-      fatalError("Expected mock data to be initialized with type Planet")
-    }
-    return Result.Publisher(planetData).eraseToAnyPublisher()
-  }
-
-  public func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError> {
-    guard let speciesData = mockData as? Species else {
-      fatalError("Expected mock data to be initialized with type Species")
-    }
-    return Result.Publisher(speciesData).eraseToAnyPublisher()
-  }
-
-  public func starship(withId resourceId: String) -> AnyPublisher<Starship, ServiceError> {
-    guard let starshipData = mockData as? Starship else {
-      fatalError("Expected mock data to be initialized with type Starship")
-    }
-    return Result.Publisher(starshipData).eraseToAnyPublisher()
-  }
-
-  public func vehicle(withId resourceId: String) -> AnyPublisher<Vehicle, ServiceError> {
-    guard let vehicleData = mockData as? Vehicle else {
-      fatalError("Expected mock data to be initialized with type Vehicle")
-    }
-    return Result.Publisher(vehicleData).eraseToAnyPublisher()
-  }
-
-  public func allFilms(page: String?) -> AnyPublisher<ResourceRoot<Film>, ServiceError> {
-    guard let filmsData = mockData as? ResourceRoot<Film> else {
-      fatalError("Expected mock data to be initialized with type FilmResourceRoot")
-    }
-    return Result.Publisher(filmsData).eraseToAnyPublisher()
-  }
-
-  public func allPeople(page: String?) -> AnyPublisher<ResourceRoot<Person>, ServiceError> {
-    guard let peopleData = mockData as? ResourceRoot<Person> else {
-      fatalError("Expected mock data to be initialzed with type PersonResourceRoot")
-    }
-    return Result.Publisher(peopleData).eraseToAnyPublisher()
-  }
-
-  public func allPlanets(page: String?) -> AnyPublisher<ResourceRoot<Planet>, ServiceError> {
-        guard let planetsData = mockData as? ResourceRoot<Planet> else {
-      fatalError("Expected mock data to be initialzed with type PlanetResourceRoot")
-    }
-    return Result.Publisher(planetsData).eraseToAnyPublisher()
-  }
-
-  public func allSpecies(page: String?) -> AnyPublisher<ResourceRoot<Species>, ServiceError> {
-    guard let speciesData = mockData as? ResourceRoot<Species> else {
-      fatalError("Expected mock data to be initialzed with type SpeciesResourceRoot")
-    }
-    return Result.Publisher(speciesData).eraseToAnyPublisher()
-  }
-
-  public func allStarships(page: String?) -> AnyPublisher<ResourceRoot<Starship>, ServiceError> {
-    guard let starshipsData = mockData as? ResourceRoot<Starship> else {
-      fatalError("Expected mock data to be initialzed with type StarshipResourceRoot")
-    }
-    return Result.Publisher(starshipsData).eraseToAnyPublisher()
-  }
-
-  public func allVehicles(page: String?) -> AnyPublisher<ResourceRoot<Vehicle>, ServiceError> {
-    guard let vehiclesData = mockData as? ResourceRoot<Vehicle> else {
-      fatalError("Expected mock data to be initialzed with type VehicleResourceRoot")
-    }
-    return Result.Publisher(vehiclesData).eraseToAnyPublisher()
-  }
-
-  public func people(fromResourceUrls urls: [String]) -> AnyPublisher<[Person], ServiceError> {
-    guard let people = mockData as? [Person] else {
-      fatalError("Expected mock data to be initialized with type Person array")
-    }
-    return Result.Publisher(people).eraseToAnyPublisher()
-  }
-
-  public func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError> {
-    guard let starships = mockData as? [Starship] else {
-      fatalError("Expected mock data to be initialized with type Starship array")
-    }
-    return Result.Publisher(starships).eraseToAnyPublisher()
-  }
-
-  public func planets(fromResourceUrls urls: [String]) -> AnyPublisher<[Planet], ServiceError> {
-    guard let planets = mockData as? [Planet] else {
-      fatalError("Expected mock data to be initialized with type Planet array")
-    }
-    return Result.Publisher(planets).eraseToAnyPublisher()
-  }
-
-  public func species(fromResourceUrls urls: [String]) -> AnyPublisher<[Species], ServiceError> {
-    guard let species = mockData as? [Species] else {
-      fatalError("Expected mock data to be initialized with type Species array")
-    }
-    return Result.Publisher(species).eraseToAnyPublisher()
-  }
-
-  public func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError> {
-    guard let vehicles = mockData as? [Vehicle] else {
-      fatalError("Expected mock data to be initialized with type Vehicle array")
-    }
-    return Result.Publisher(vehicles).eraseToAnyPublisher()
-  }
-
-  public func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError> {
-    guard let films = mockData as? [Film] else {
-      fatalError("Expected mock data to be initialized with type Film array")
-    }
-    return Result.Publisher(films).eraseToAnyPublisher()
-  }
-}
-
-public struct MockGraphDataService: SwapiService {
-
-  public typealias DataStore = [DataStoreKey: [SwapiResource]]
-
-  public enum DataStoreKey {
-    case films
-    case people
-    case planets
-    case species
-    case starships
-    case vehicles
-  }
-
-  private let dataStore: DataStore
-
-  private let homeworld: Planet?
-
-  public init(
-    dataStore: DataStore,
-    homeworld: Planet? = nil
-  ) {
-    self.dataStore = dataStore
-    self.homeworld = homeworld
-  }
-
-  public func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func person(withId resourceId: String) -> AnyPublisher<Person, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func planet(withResourceUrl url: String?) -> AnyPublisher<Planet, ServiceError> {
-    guard let planet = homeworld else {
-      fatalError("Expected type Planet")
-    }
-    return Result.Publisher(planet).eraseToAnyPublisher()
-  }
-
-  public func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func starship(withId resourceId: String) -> AnyPublisher<Starship, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func vehicle(withId resourceId: String) -> AnyPublisher<Vehicle, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allFilms(page: String?) -> AnyPublisher<ResourceRoot<Film>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allPeople(page: String?) -> AnyPublisher<ResourceRoot<Person>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allPlanets(page: String?) -> AnyPublisher<ResourceRoot<Planet>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allSpecies(page: String?) -> AnyPublisher<ResourceRoot<Species>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allStarships(page: String?) -> AnyPublisher<ResourceRoot<Starship>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func allVehicles(page: String?) -> AnyPublisher<ResourceRoot<Vehicle>, ServiceError> {
-    fatalError("Method not implemented for MockGraphDataService")
-  }
-
-  public func people(fromResourceUrls urls: [String]) -> AnyPublisher<[Person], ServiceError> {
-    guard let people = dataStore[.people] as? [Person] else {
-      fatalError("Expected mock data to be initialized with type Person array.")
-    }
-    return Result.Publisher(people).eraseToAnyPublisher()
-  }
-
-  public func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError> {
-    guard let starships = dataStore[.starships] as? [Starship] else {
-      fatalError("Expected mock data to be initialized with type Starship array")
-    }
-    return Result.Publisher(starships).eraseToAnyPublisher()
-  }
-
-  public func planets(fromResourceUrls urls: [String]) -> AnyPublisher<[Planet], ServiceError> {
-    guard let planets = dataStore[.planets] as? [Planet] else {
-      fatalError("Expected mock data to be initialized with type Planet array")
-    }
-    return Result.Publisher(planets).eraseToAnyPublisher()
-  }
-
-  public func species(fromResourceUrls urls: [String]) -> AnyPublisher<[Species], ServiceError> {
-    guard let species = dataStore[.species] as? [Species] else {
-      fatalError("Expected mock data to be initialized with type Species array")
-    }
-    return Result.Publisher(species).eraseToAnyPublisher()
-  }
-
-  public func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError> {
-    guard let vehicles = dataStore[.vehicles] as? [Vehicle] else {
-      fatalError("Expected mock data to be initialized withy type Vehicle array")
-    }
-    return Result.Publisher(vehicles).eraseToAnyPublisher()
-  }
-
-  public func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError> {
-    guard let films = dataStore[.films] as? [Film] else {
-      fatalError("Expected mock data to be initialized with type Film  array")
-    }
-    return Result.Publisher(films).eraseToAnyPublisher()
   }
 }
