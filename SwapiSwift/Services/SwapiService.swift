@@ -9,54 +9,95 @@
 import Foundation
 import Combine
 
+/// An enumeration of error states that can be returned from a `SwapiService`
 public enum ServiceError: Error {
   case unknown
   case networkError(error: NetworkError)
   case parsingError(error: Error)
 }
 
+/// Objects conforming to the `SwapiService` protocol may act as a data service for request resources from the Star Wars API (SWAPI)
 public protocol SwapiService {
 
+  /// Call this function to request a `Film` resource with a resource ID
+  /// - Parameter resourceId: The specified  ID `String` for the `Film` being requested.
   func film(withId resourceId: String) -> AnyPublisher<Film, ServiceError>
 
+  /// Call this function to request a `Person` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the `Person` being requested.
   func person(withId resourceId: String) -> AnyPublisher<Person, ServiceError>
 
+  /// Call this function to request a `Planet` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func planet(withId resourceId: String) -> AnyPublisher<Planet, ServiceError>
 
+  /// Call tis function to request a `Planet` resource with a resource URL.
+  /// - Parameter url: The specified URL `String` for the resource.
   func planet(withResourceUrl url: String?) -> AnyPublisher<Planet, ServiceError>
 
+  /// Call tis function to request a `Species` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func species(withId resourceId: String) -> AnyPublisher<Species, ServiceError>
 
+  /// Call this function to request a `Starship` resource with a resource ID.
+  /// - Parameter resourceId: The specified  ID `String` for the resource.
   func starship(withId resourceId: String) -> AnyPublisher<Starship, ServiceError>
 
+  /// Call this function to request a `Vehicle` resource with a resource ID.
+  /// - Parameter resourceId: The specified ID `String` for the resource.
   func vehicle(withId resourceId: String) -> AnyPublisher<Vehicle, ServiceError>
 
+  /// Call this function to request a list of all the `Film` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allFilms(page: String?) -> AnyPublisher<ResourceRoot<Film>, ServiceError>
 
+  /// Call this function to request a list of all the `Person` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allPeople(page: String?) -> AnyPublisher<ResourceRoot<Person>, ServiceError>
 
+  /// Call this function to request a list of all the `Planet` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allPlanets(page: String?) -> AnyPublisher<ResourceRoot<Planet>, ServiceError>
 
+  /// Call this function to request a list of all the `Species` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allSpecies(page: String?) -> AnyPublisher<ResourceRoot<Species>, ServiceError>
 
+  /// Call this function to request a list of all the `Starship` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allStarships(page: String?) -> AnyPublisher<ResourceRoot<Starship>, ServiceError>
 
+  /// Call this function to request a list of all the `Vehicle` resources available from the API service.
+  /// - Parameter page: An optional resource URL `String` specifying the page of results being requested.
   func allVehicles(page: String?) -> AnyPublisher<ResourceRoot<Vehicle>, ServiceError>
 
+  /// Call this function to perform multiple requests for `Film` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError>
+
+  /// Call this function to perform multiple requests for `Person` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func people(fromResourceUrls urls: [String]) -> AnyPublisher<[Person], ServiceError>
 
-  func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError>
-
+  /// Call this function to perform multiple requests for `Planet` resources from an using of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func planets(fromResourceUrls urls: [String]) -> AnyPublisher<[Planet], ServiceError>
 
+  /// Call this function to perform multiple requests for `Species` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
   func species(fromResourceUrls urls: [String]) -> AnyPublisher<[Species], ServiceError>
 
-  func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError>
+  /// Call this function to perform multiple requests for `Starship` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func starships(fromResourceUrls urls: [String]) -> AnyPublisher<[Starship], ServiceError>
 
-  func films(fromResourceUrls urls: [String]) -> AnyPublisher<[Film], ServiceError>
+  /// Call this function to perform multiple requests for `Vehicle` resources using an array of resource URLs.
+  /// - Parameter urls: The specified array of resource URLs for the resources being requested.
+  func vehicles(fromResourceUrls urls: [String]) -> AnyPublisher<[Vehicle], ServiceError>
 
 }
 
+/// The default implementation of a data service conforming to the `SwapiService` protocol.
 public struct DataService: SwapiService {
 
   private let dataFetcher = DataFetcher()
