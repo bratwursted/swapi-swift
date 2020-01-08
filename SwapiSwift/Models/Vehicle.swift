@@ -11,52 +11,52 @@ import Foundation
 /// Represents metadata associated with a vehicle in the Star Wars universe.
 public struct Vehicle: SwapiResource, Hashable {
 
-  /// An array of Film URL Resources that this vehicle has appeared in.
+  /// An array of `Film` resource URLs that this vehicle has appeared in.
   public let films: [String]
 
   /// Timestamp when this resource was created.
   public let created: Date
 
-  /// The hypermedia URL of this resource.
+  /// The URL of this resource.
   public let url: String
 
-  /// The maximum number of kilograms that this vehicle can transport.
+  /// The maximum mass of cargo this vehicle can transport, in kilograms.
   public let cargoCapacity: String
 
   /// The number of personnel needed to run or pilot this vehicle.
   public let crew: String
 
-  /// An array of People URL Resources that this vehicle has been piloted by.
+  /// An array of `People` resource URLs that this vehicle has been piloted by.
   public let pilots: [String]
 
   /// The cost of this vehicle new, in galactic credits.
   public let cost: String
 
-  /// The length of this vehicle in meters.
+  /// The length of this vehicle, in meters.
   public let length: String
 
-  /// The manufacturer of this vehicle. Comma seperated if more than one.
+  /// The manufacturer of this vehicle. Comma seperated if more than one (e.g., "Corellia Mining Corporation").
   public let manufacturer: String
 
-  /// Timestamp when this resource was last edited.
+  /// Timestamp of the last edit for this resource.
   public let edited: Date
 
-  /// The model or official name of this vehicle (e.g.,  All Terrain Attack Transport).
+  /// The model or official name of this vehicle (e.g.,  "All Terrain Attack Transport").
   public let model: String
 
   /// The number of non-essential people this vehicle can transport.
   public let passengers: String
 
-  /// The class of this vehicle (e.g., Wheeled).
+  /// The class of this vehicle (e.g., "wheeled").
   public let vehicleClass: String
 
   /// The maximum length of time that this vehicle can provide consumables for its entire crew without having to resupply.
   public let consumables: String
 
-  /// The common name of this vehicle (e.g., Sand Crawler).
+  /// The common name of this vehicle (e.g., "Sand Crawler").
   public let name: String
 
-  /// The maximum speed of this vehicle in atmosphere.
+  /// The maximum speed of this vehicle in atmosphere. in kph.
   public let maximumAtmosphericSpeed: String
 
   enum CodingKeys: String, CodingKey {

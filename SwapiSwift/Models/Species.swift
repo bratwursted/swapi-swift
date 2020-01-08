@@ -11,7 +11,7 @@ import Foundation
 /// Represents metadata associated with a species featured in the Star Wars universe.
 public struct Species: SwapiResource, Hashable {
 
-  ///  An array of `Film` URL resources that this species has appeared in.
+  ///  An array of `Film` resource URLs that this species has appeared in.
   public let films: [String]
 
   /// The timestamp when this resource was created.
@@ -20,10 +20,10 @@ public struct Species: SwapiResource, Hashable {
   /// The URL for this resource.
   public let url: String
 
-  /// The designation of this species.
+  /// The designation of this species (e.g., "sentient").
   public let designation: String
 
-  /// The language commonly spoken by this species.
+  /// The language commonly spoken by this species (e.g., "Galactic basic").
   public let language: String
 
   /// A comma-seperated string of common skin colors for this species, none if this species does not typically have skin.
@@ -32,22 +32,22 @@ public struct Species: SwapiResource, Hashable {
   /// A comma-seperated string of common hair colors for this species, none if this species does not typically have hair.
   public let hairColors: String
 
-  /// An array of `Person` URL resources that are a part of this species.
+  /// An array of `Person` resource URLs that are a part of this species.
   public let people: [String]
 
   /// The URL of a planet resource, a planet that this species originates from.
   public let homeworld: String?
 
-  /// Timestamp when this resource was last edited.
+  /// Timestamp of the last edit for this resource.
   public let edited: Date
 
-  // The average lifespan of this species in years.
+  /// The average lifespan of this species in years.
   public let averageLifespan: String
 
-  /// The average height of this person in centimeters.
+  /// The average height of this species in centimeters.
   public let averageHeight: String
 
-  /// The classification of this species.
+  /// The classification of this species (e.g., "mammal").
   public let classification: String
 
   /// The name of this species.
