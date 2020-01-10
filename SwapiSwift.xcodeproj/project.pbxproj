@@ -26,6 +26,7 @@
 		8F34E28A23BBD71400608F46 /* SpeciesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */; };
 		8F34E28C23BBF1A600608F46 /* StarshipModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */; };
 		8F34E28E23BBF1D000608F46 /* starship_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F34E28D23BBF1D000608F46 /* starship_response.json */; };
+		8F4CEA9823C8F536000AAD47 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F4CEA9723C8F536000AAD47 /* README.md */; };
 		8F535D7923BF65F300E72BF9 /* PersonGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D7823BF65F300E72BF9 /* PersonGraphService.swift */; };
 		8F535D7B23BF6DA300E72BF9 /* PlanetGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D7A23BF6DA300E72BF9 /* PlanetGraphService.swift */; };
 		8F535D7D23BF6F6500E72BF9 /* SpeciesGraphService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D7C23BF6F6500E72BF9 /* SpeciesGraphService.swift */; };
@@ -84,6 +85,7 @@
 		8F34E28923BBD71400608F46 /* SpeciesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesModelTests.swift; sourceTree = "<group>"; };
 		8F34E28B23BBF1A600608F46 /* StarshipModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipModelTests.swift; sourceTree = "<group>"; };
 		8F34E28D23BBF1D000608F46 /* starship_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starship_response.json; sourceTree = "<group>"; };
+		8F4CEA9723C8F536000AAD47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8F535D7823BF65F300E72BF9 /* PersonGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGraphService.swift; sourceTree = "<group>"; };
 		8F535D7A23BF6DA300E72BF9 /* PlanetGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetGraphService.swift; sourceTree = "<group>"; };
 		8F535D7C23BF6F6500E72BF9 /* SpeciesGraphService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesGraphService.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		8F34E24123BB79F900608F46 = {
 			isa = PBXGroup;
 			children = (
+				8F4CEA9723C8F536000AAD47 /* README.md */,
 				8F34E24D23BB79F900608F46 /* SwapiSwift */,
 				8F34E25823BB79F900608F46 /* SwapiSwiftTests */,
 				8F34E24C23BB79F900608F46 /* Products */,
@@ -337,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4CEA9823C8F536000AAD47 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
