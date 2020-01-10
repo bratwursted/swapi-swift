@@ -33,6 +33,7 @@ extension GraphService {
 ///   - receiveCompletion: A closure to execute upon completion of the request.
 ///   - receiveValue: A closure for execution upon receipt of the value, takes an array of `Film` as its argument.
 /// - Returns: A cancellable instance.
+@available(iOS 13, *)
 func fetchFilms(
   from dataService: SwapiService,
   with urls: [String],
@@ -50,6 +51,7 @@ func fetchFilms(
 /// - Parameter receiveCompletion: A closure executed upon completion of the request.
 /// - Parameter receiveValue: A closure executed upon receipt of the value, takes an array of `Person` as it's argument.
 /// - Returns: A cancellable instance.
+@available(iOS 13, *)
 func fetchPeople(
   from dataService: SwapiService,
   with urls: [String],
@@ -67,6 +69,7 @@ func fetchPeople(
 ///   - urls: The specified array of `String` resource URLs.
 ///   - receiveCompletion: A closure executed upon completion of the requests.
 ///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Planet` as its argument.
+@available(iOS 13, *)
 func fetchPlanets(
   from dataService: SwapiService,
   with urls: [String],
@@ -84,6 +87,7 @@ func fetchPlanets(
 ///   - urls: The specified array of `String` resource URLs.
 ///   - receiveCompletion: A closure executed upon completion ofg of the network request.
 ///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Species` as its argument.
+@available(iOS 13, *)
 func fetchSpecies(
   from dataService: SwapiService,
   with urls: [String],
@@ -101,6 +105,7 @@ func fetchSpecies(
 ///   - urls: The specified arrays of `String` resource URLs.
 ///   - receiveCompletion: A closure executed upon completion of the request.
 ///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Starship` as its argument.
+@available(iOS 13, *)
 func fetchStarships(
   from dataService: SwapiService,
   with urls: [String],
@@ -118,6 +123,7 @@ func fetchStarships(
 ///   - urls: The specified array of `String` resource URLs.
 ///   - receiveCompletion: A closure executed upon completion of the request.
 ///   - receiveValue: A closure executed upon receipt of a value, takes an array of `Vehicle` as its argument.
+@available(iOS 13, *)
 func fetchVehicles(
   from dataService: SwapiService,
   with urls: [String],

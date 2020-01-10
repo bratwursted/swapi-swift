@@ -10,6 +10,7 @@ import Foundation
 import Combine
 
 /// A helper class responsible for handling requests for resources associated with a `Starship`.
+@available(iOS 13, *)
 public final class StarshipGraphService: GraphService {
 
   public let starship: Starship

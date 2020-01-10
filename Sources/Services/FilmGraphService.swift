@@ -10,6 +10,7 @@ import Foundation
 import Combine
 
 /// A helper class responsible for handling requests for resources associated with a `Film`.
+@available(iOS 13, *)
 public final class FilmGraphService: GraphService, ObservableObject {
 
   public let film: Film

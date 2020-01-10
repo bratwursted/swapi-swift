@@ -11,6 +11,7 @@ import Combine
 
 /// A simple mock data service conforming to `SwapiService` initialized with a resource conforming to `SwapiResource`.
 /// Designed for use in testing and SwiftUI development.
+@available(iOS 13, *)
 public struct MockDataService<T: SwapiResource>: SwapiService {
 
   let mockData: T

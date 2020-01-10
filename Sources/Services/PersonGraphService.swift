@@ -10,6 +10,7 @@ import Foundation
 import Combine
 
 /// A helper class responsible for handling requetss for resources associated with a `Person`.
+@available(iOS 13, *)
 public final class PersonGraphService: GraphService, ObservableObject {
 
   public let person: Person

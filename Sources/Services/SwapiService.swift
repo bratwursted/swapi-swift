@@ -17,6 +17,7 @@ public enum ServiceError: Error {
 }
 
 /// Objects conforming to the `SwapiService` protocol may act as a data service for request resources from the Star Wars API (SWAPI)
+@available(iOS 13, *)
 public protocol SwapiService {
 
   /// Call this function to request a `Film` resource with a resource ID
@@ -98,6 +99,7 @@ public protocol SwapiService {
 }
 
 /// The default implementation of a data service conforming to the `SwapiService` protocol.
+@available(iOS 13, *)
 public struct DataService: SwapiService {
 
   private let dataFetcher = DataFetcher()
