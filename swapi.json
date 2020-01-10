@@ -1,0 +1,659 @@
+{
+  "info": {
+    "name": "Swapi.paw",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://swapi.co/api/",
+          "query": null,
+          "protocol": "https",
+          "host": [
+            "swapi",
+            "co"
+          ],
+          "port": null,
+          "path": [
+            "api"
+          ]
+        },
+        "description": "Returns all available resources",
+        "header": [],
+        "body": null,
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Films",
+      "item": [
+        {
+          "name": "Films",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/films/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "films"
+              ]
+            },
+            "description": "Returns all Films resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Star Wars: A New Hope",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/films/1/",
+              "query": [
+                {
+                  "key": "format",
+                  "value": "wookiee",
+                  "disabled": true,
+                  "description": null
+                }
+              ],
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "films",
+                "1"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Films schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/films/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "films",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for Films resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "People",
+      "item": [
+        {
+          "name": "People",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/people/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "people"
+              ]
+            },
+            "description": "Returns all available People resources",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Luke Skywalker",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/people/1/",
+              "query": [
+                {
+                  "key": "format",
+                  "value": "wookiee",
+                  "disabled": true,
+                  "description": null
+                }
+              ],
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "people",
+                "1"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "People schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/people/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "people",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for People resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "Planets",
+      "item": [
+        {
+          "name": "Planets",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/planets/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "planets"
+              ]
+            },
+            "description": "Retruns all available Planet resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Alderaan",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/planets/2/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "planets",
+                "2"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Planets schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/planets/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "planets",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for Planets resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "Species",
+      "item": [
+        {
+          "name": "Species",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/species/",
+              "query": [
+                {
+                  "key": "page",
+                  "value": "4",
+                  "disabled": true,
+                  "description": null
+                }
+              ],
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "species"
+              ]
+            },
+            "description": "Returns all available Species resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Hutt",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/species/5/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "species",
+                "5"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Species schema ",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/species/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "species",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for Species resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "Starships",
+      "item": [
+        {
+          "name": "Starships",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/starships/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "starships"
+              ]
+            },
+            "description": "Returns all available Starship resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Executor",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/starships/15/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "starships",
+                "15"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Starships schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/starships/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "starships",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for Starships resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "Vehicles",
+      "item": [
+        {
+          "name": "Vehicles",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/vehicles/",
+              "query": [
+                {
+                  "key": "page",
+                  "value": "4",
+                  "disabled": true,
+                  "description": null
+                }
+              ],
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            },
+            "description": "Returns all available Vehicle resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Sand Crawler",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/vehicles/4/",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "vehicles",
+                "4"
+              ]
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Vehicles schema",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "https://swapi.co/api/vehicles/schema",
+              "query": null,
+              "protocol": "https",
+              "host": [
+                "swapi",
+                "co"
+              ],
+              "port": null,
+              "path": [
+                "api",
+                "vehicles",
+                "schema"
+              ]
+            },
+            "description": "JSON schema for Vehicles resources\n",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    }
+  ]
+}
