@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F34E24A23BB79F900608F46"
+               BlueprintIdentifier = "SwapiSwift::SwapiSwift"
                BuildableName = "SwapiSwift.framework"
                BlueprintName = "SwapiSwift"
                ReferencedContainer = "container:SwapiSwift.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F34E25323BB79F900608F46"
+               BlueprintIdentifier = "SwapiSwift::SwapiSwiftTests"
                BuildableName = "SwapiSwiftTests.xctest"
                BlueprintName = "SwapiSwiftTests"
                ReferencedContainer = "container:SwapiSwift.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F34E24A23BB79F900608F46"
+            BlueprintIdentifier = "SwapiSwift::SwapiSwift"
             BuildableName = "SwapiSwift.framework"
             BlueprintName = "SwapiSwift"
             ReferencedContainer = "container:SwapiSwift.xcodeproj">
