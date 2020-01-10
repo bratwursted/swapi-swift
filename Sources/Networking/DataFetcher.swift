@@ -46,6 +46,7 @@ public enum NetworkError: Error {
 }
 
 /// The `DataFetcher` performs network requests for a specified URL.
+@available(iOS 13, *)
 struct DataFetcher {
   private let sharedSession = URLSession.shared
 
