@@ -9,6 +9,8 @@
 import Foundation
 @testable import SwapiSwift
 
+final class TestData { }
+
 var sampleFilm: Film {
   load("film_response")
 }
@@ -42,8 +44,8 @@ var sampleRoot: SwapiRoot {
 }
 
 func load<T: Decodable>(_ testFile: String) -> T {
-  let bundle = Bundle(identifier: "com.thinx.SwapiSwiftTests")
-  guard let dataFile = bundle?.url(forResource: testFile, withExtension: "json") else {
+  let bundle = Bundle(for: TestData.self)
+  guard let dataFile = bundle.url(forResource: testFile, withExtension: "json") else {
     fatalError("Failed to load test data \(testFile)")
   }
   do {

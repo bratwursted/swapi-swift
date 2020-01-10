@@ -21,6 +21,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8FC58E9023C8BEB70041149F /* film_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8723C8BE320041149F /* film_response.json */; };
+		8FC58E9123C8BEB70041149F /* films.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8823C8BE320041149F /* films.json */; };
+		8FC58E9223C8BEB70041149F /* planet_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8923C8BE320041149F /* planet_response.json */; };
+		8FC58E9323C8BEB70041149F /* vehicle_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8A23C8BE320041149F /* vehicle_response.json */; };
+		8FC58E9423C8BEB70041149F /* starship_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8B23C8BE320041149F /* starship_response.json */; };
+		8FC58E9523C8BEB70041149F /* person_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8C23C8BE320041149F /* person_response.json */; };
+		8FC58E9623C8BEB70041149F /* species_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8D23C8BE320041149F /* species_response.json */; };
+		8FC58E9723C8BEB70041149F /* root.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FC58E8E23C8BE320041149F /* root.json */; };
 		OBJ_101 /* FilmModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* FilmModelTests.swift */; };
 		OBJ_102 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* FilmsTests.swift */; };
 		OBJ_103 /* PersonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* PersonModelTests.swift */; };
@@ -75,6 +83,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FC58E8723C8BE320041149F /* film_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = film_response.json; sourceTree = "<group>"; };
+		8FC58E8823C8BE320041149F /* films.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = films.json; sourceTree = "<group>"; };
+		8FC58E8923C8BE320041149F /* planet_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = planet_response.json; sourceTree = "<group>"; };
+		8FC58E8A23C8BE320041149F /* vehicle_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicle_response.json; sourceTree = "<group>"; };
+		8FC58E8B23C8BE320041149F /* starship_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starship_response.json; sourceTree = "<group>"; };
+		8FC58E8C23C8BE320041149F /* person_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person_response.json; sourceTree = "<group>"; };
+		8FC58E8D23C8BE320041149F /* species_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = species_response.json; sourceTree = "<group>"; };
+		8FC58E8E23C8BE320041149F /* root.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.json; sourceTree = "<group>"; };
 		OBJ_11 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
@@ -140,6 +156,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FC58E8623C8BE320041149F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FC58E8723C8BE320041149F /* film_response.json */,
+				8FC58E8823C8BE320041149F /* films.json */,
+				8FC58E8923C8BE320041149F /* planet_response.json */,
+				8FC58E8A23C8BE320041149F /* vehicle_response.json */,
+				8FC58E8B23C8BE320041149F /* starship_response.json */,
+				8FC58E8C23C8BE320041149F /* person_response.json */,
+				8FC58E8D23C8BE320041149F /* species_response.json */,
+				8FC58E8E23C8BE320041149F /* root.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +235,7 @@
 				OBJ_45 /* StarshipModelTests.swift */,
 				OBJ_46 /* TestData.swift */,
 				OBJ_47 /* VehicleModelTests.swift */,
+				8FC58E8623C8BE320041149F /* Resources */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
@@ -272,6 +304,7 @@
 			buildPhases = (
 				OBJ_100 /* Sources */,
 				OBJ_111 /* Frameworks */,
+				8FC58E8F23C8BEAE0041149F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +358,24 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FC58E8F23C8BEAE0041149F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC58E9023C8BEB70041149F /* film_response.json in Resources */,
+				8FC58E9123C8BEB70041149F /* films.json in Resources */,
+				8FC58E9223C8BEB70041149F /* planet_response.json in Resources */,
+				8FC58E9323C8BEB70041149F /* vehicle_response.json in Resources */,
+				8FC58E9423C8BEB70041149F /* starship_response.json in Resources */,
+				8FC58E9523C8BEB70041149F /* person_response.json in Resources */,
+				8FC58E9623C8BEB70041149F /* species_response.json in Resources */,
+				8FC58E9723C8BEB70041149F /* root.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_100 /* Sources */ = {
